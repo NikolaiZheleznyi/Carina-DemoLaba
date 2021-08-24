@@ -15,11 +15,18 @@ public class UserMenu extends AbstractPage {
     @FindBy(xpath = "//span[text()='Мои сообщения']")
     private ExtendedWebElement myMesseges;
 
+    @FindBy(xpath = "//div[contains(@class, 'popup_type_active')]//span[contains(@class, 'popup_type_info_close')]")
+    private ExtendedWebElement closeInfoField;
+
     public void clickMyAds(){
         myAds.click();
     }
 
     public void clickMyMesseges(){
         myMesseges.click();
+    }
+
+    public void closeInfoField(){
+        closeInfoField.click();
     }
 }
