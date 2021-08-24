@@ -12,7 +12,7 @@ public class ChooseProductCategory extends AbstractPage {
     @FindBy(xpath = "//div[@class='mm-aK-742a5']//a[@data-id='21000']")
     private ExtendedWebElement furnitureCategory;
 
-    @FindBy(xpath = "//div[@class='kf-sjxq-f4490']//span[text()='Стулья']")
+    @FindBy(xpath = "//span[text()='Стулья']")
     private ExtendedWebElement chairCategory;
 
     @FindBy(xpath = "//div[@data-name='get_listing']//span[text()='Показать результаты']")

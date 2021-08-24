@@ -37,11 +37,23 @@ public class KufarHomePage extends AbstractPage {
     @FindBy(xpath = "//div[@class='kf-OZzP-810dc']//div[1]//a")
     private ExtendedWebElement chooseProduct;
 
-    @FindBy(xpath = "//div[@class='kf-NQY-dfbb4']//button")
-    private ExtendedWebElement changeLanguage;
+    @FindBy(xpath = "//span[text()='Беларуская']")
+    private ExtendedWebElement changeLanguageBelarus;
 
-    @FindBy(xpath = "//div[@class='kf-ThiU-4e8f6']//a[4]")
+    @FindBy(xpath = "//span[text()='Русский']")
+    private ExtendedWebElement changeLanguageRussia;
+
+    @FindBy(xpath = "//div[@data-name='listings-pagination']//a[5]")
     private ExtendedWebElement nextPage;
+
+    @FindBy(xpath = "//div[@data-name='listings-pagination']//a[1]")
+    private ExtendedWebElement backPage;
+
+    @FindBy(xpath = "./*")
+    private ExtendedWebElement lotLink;
+
+    @FindBy(xpath = "//div[@data-name='user_profile_pic']//span[text()='Н']")
+    private ExtendedWebElement userImageBtn;
 
     public KufarHomePage(WebDriver driver) {
         super(driver);
@@ -77,19 +89,27 @@ public class KufarHomePage extends AbstractPage {
     }
 
     public void clickChangeLanguage() {
-        changeLanguage.scrollTo();
-        changeLanguage.click();
-        changeLanguage.click();
+        changeLanguageBelarus.click();
+        changeLanguageRussia.click();
     }
     public void clickNextPage() {
         nextPage.scrollTo();
         nextPage.click();
         pause(2);
-        nextPage.scrollTo();
-        nextPage.click();
+
+    }
+    public void clickBackPage() {
+        backPage.scrollTo();
+        backPage.click();
+        pause(2);
+    }
+    public LotDescriptionPage openlotDescriptionPage() {
+        lotLink.click();
+        return new LotDescriptionPage(driver);
     }
 
-    /*public ChooseProductCategory openProductPage() {
+   public LotDescriptionPage openProductPage() {
+        lotLink.click();
         String originalWindow = getDriver().getWindowHandle();
         for (String windowHandle : getDriver().getWindowHandles()) {
             if(!originalWindow.contentEquals(windowHandle)) {
@@ -97,6 +117,10 @@ public class KufarHomePage extends AbstractPage {
                 break;
             }
         }
-        return new ChooseProductCategory(getDriver());
-    }*/
+        return new LotDescriptionPage(getDriver());
+    }
+
+    public ExtendedWebElement getUserImageBtn(){
+        return userImageBtn;
+    }
 }

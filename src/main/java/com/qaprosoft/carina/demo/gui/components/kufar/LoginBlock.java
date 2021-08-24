@@ -19,6 +19,9 @@ public class LoginBlock extends AbstractPage {
     @FindBy(xpath = "//div[@data-name='login_submit']//button[@type='submit']")
     private ExtendedWebElement authoButton;
 
+    @FindBy(xpath = "//button[text()='Войти в другой профиль']")
+    private ExtendedWebElement logInOtherProfile;
+
     public void inputEmail(String e){
         emailField.click();
         emailField.type(e);
@@ -32,5 +35,7 @@ public class LoginBlock extends AbstractPage {
     public void authoButton(){
         authoButton.click();
     }
+
+    public void LogInOtherProfile(){logInOtherProfile.click();}
 }
 
