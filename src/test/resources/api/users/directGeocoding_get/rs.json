@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Minsk",
+    "local_names": {
+      "ar": "مينسك",
+      "ascii": "Minsk",
+      "bg": "Минск",
+      "ca": "Minsk",
+      "da": "Minsk",
+      "de": "Minsk",
+      "el": "Μινσκ",
+      "en": "Minsk",
+      "eu": "Minsk",
+      "fa": "مینسک",
+      "feature_name": "Minsk",
+      "fi": "Minsk",
+      "fr": "Minsk",
+      "gl": "Minsk - Мінск",
+      "he": "מינסק",
+      "hr": "Minsk",
+      "hu": "Minszk",
+      "id": "Minsk",
+      "it": "Minsk",
+      "ja": "ミンスク",
+      "la": "Minscum",
+      "lt": "Minskas",
+      "mk": "Минск",
+      "nl": "Minsk",
+      "no": "Minsk",
+      "pl": "Mińsk",
+      "pt": "Minsk",
+      "ro": "Минск",
+      "ru": "Минск",
+      "sk": "Minsk",
+      "sl": "Minsk",
+      "sr": "Минск",
+      "th": "มินสก์",
+      "tr": "Minsk",
+      "vi": "Minsk"
+    },
+    "lat": 53.9,
+    "lon": 27.5667,
+    "country": "BY"
+  },
+  {
+    "name": "Minsk Oblast",
+    "local_names": {
+      "ascii": "Minsk Oblast",
+      "en": "Minsk Region",
+      "feature_name": "Minsk Oblast",
+      "fr": "Minsk",
+      "lt": "Minsko sritis",
+      "ru": "Минская Область"
+    },
+    "lat": 54,
+    "lon": 28,
+    "country": "BY"
+  },
+  {
+    "name": "Horad Minsk",
+    "local_names": {
+      "ascii": "Horad Minsk",
+      "en": "Minsk City",
+      "feature_name": "Horad Minsk",
+      "fr": "Minsk",
+      "lt": "Minskas",
+      "ru": "Минск"
+    },
+    "lat": 53.9,
+    "lon": 27.5667,
+    "country": "BY"
+  }
+]

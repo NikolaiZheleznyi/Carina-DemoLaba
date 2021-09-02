@@ -1,0 +1,287 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "local_names": {
+          "type": "object",
+          "properties": {
+            "ar": {
+              "type": "string"
+            },
+            "ascii": {
+              "type": "string"
+            },
+            "bg": {
+              "type": "string"
+            },
+            "ca": {
+              "type": "string"
+            },
+            "da": {
+              "type": "string"
+            },
+            "de": {
+              "type": "string"
+            },
+            "el": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            },
+            "eu": {
+              "type": "string"
+            },
+            "fa": {
+              "type": "string"
+            },
+            "feature_name": {
+              "type": "string"
+            },
+            "fi": {
+              "type": "string"
+            },
+            "fr": {
+              "type": "string"
+            },
+            "gl": {
+              "type": "string"
+            },
+            "he": {
+              "type": "string"
+            },
+            "hr": {
+              "type": "string"
+            },
+            "hu": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "it": {
+              "type": "string"
+            },
+            "ja": {
+              "type": "string"
+            },
+            "la": {
+              "type": "string"
+            },
+            "lt": {
+              "type": "string"
+            },
+            "mk": {
+              "type": "string"
+            },
+            "nl": {
+              "type": "string"
+            },
+            "no": {
+              "type": "string"
+            },
+            "pl": {
+              "type": "string"
+            },
+            "pt": {
+              "type": "string"
+            },
+            "ro": {
+              "type": "string"
+            },
+            "ru": {
+              "type": "string"
+            },
+            "sk": {
+              "type": "string"
+            },
+            "sl": {
+              "type": "string"
+            },
+            "sr": {
+              "type": "string"
+            },
+            "th": {
+              "type": "string"
+            },
+            "tr": {
+              "type": "string"
+            },
+            "vi": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "ar",
+            "ascii",
+            "bg",
+            "ca",
+            "da",
+            "de",
+            "el",
+            "en",
+            "eu",
+            "fa",
+            "feature_name",
+            "fi",
+            "fr",
+            "gl",
+            "he",
+            "hr",
+            "hu",
+            "id",
+            "it",
+            "ja",
+            "la",
+            "lt",
+            "mk",
+            "nl",
+            "no",
+            "pl",
+            "pt",
+            "ro",
+            "ru",
+            "sk",
+            "sl",
+            "sr",
+            "th",
+            "tr",
+            "vi"
+          ]
+        },
+        "lat": {
+          "type": "number"
+        },
+        "lon": {
+          "type": "number"
+        },
+        "country": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "local_names",
+        "lat",
+        "lon",
+        "country"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "local_names": {
+          "type": "object",
+          "properties": {
+            "ascii": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            },
+            "feature_name": {
+              "type": "string"
+            },
+            "fr": {
+              "type": "string"
+            },
+            "lt": {
+              "type": "string"
+            },
+            "ru": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "ascii",
+            "en",
+            "feature_name",
+            "fr",
+            "lt",
+            "ru"
+          ]
+        },
+        "lat": {
+          "type": "integer"
+        },
+        "lon": {
+          "type": "integer"
+        },
+        "country": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "local_names",
+        "lat",
+        "lon",
+        "country"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "local_names": {
+          "type": "object",
+          "properties": {
+            "ascii": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            },
+            "feature_name": {
+              "type": "string"
+            },
+            "fr": {
+              "type": "string"
+            },
+            "lt": {
+              "type": "string"
+            },
+            "ru": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "ascii",
+            "en",
+            "feature_name",
+            "fr",
+            "lt",
+            "ru"
+          ]
+        },
+        "lat": {
+          "type": "number"
+        },
+        "lon": {
+          "type": "number"
+        },
+        "country": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "local_names",
+        "lat",
+        "lon",
+        "country"
+      ]
+    }
+  ]
+}

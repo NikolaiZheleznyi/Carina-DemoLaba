@@ -1,0 +1,2642 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "cod": "200",
+            "message": 0,
+            "cnt": 40,
+            "list": [
+                {
+                    "dt": 1630422000,
+                    "main": {
+                        "temp": 292.16,
+                        "feels_like": 292,
+                        "temp_min": 292.16,
+                        "temp_max": 292.47,
+                        "pressure": 1008,
+                        "sea_level": 1008,
+                        "grnd_level": 983,
+                        "humidity": 72,
+                        "temp_kf": -0.31
+                    },
+                    "weather": [
+                        {
+                            "id": 500,
+                            "main": "Rain",
+                            "description": "light rain",
+                            "icon": "10d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 83
+                    },
+                    "wind": {
+                        "speed": 3.38,
+                        "deg": 253,
+                        "gust": 5.42
+                    },
+                    "visibility": 10000,
+                    "pop": 0.26,
+                    "rain": {
+                        "3h": 0.15
+                    },
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-08-31 15:00:00"
+                },
+                {
+                    "dt": 1630432800,
+                    "main": {
+                        "temp": 289.01,
+                        "feels_like": 288.84,
+                        "temp_min": 287.51,
+                        "temp_max": 289.01,
+                        "pressure": 1009,
+                        "sea_level": 1009,
+                        "grnd_level": 983,
+                        "humidity": 84,
+                        "temp_kf": 1.5
+                    },
+                    "weather": [
+                        {
+                            "id": 803,
+                            "main": "Clouds",
+                            "description": "broken clouds",
+                            "icon": "04n"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 55
+                    },
+                    "wind": {
+                        "speed": 3.04,
+                        "deg": 258,
+                        "gust": 6.05
+                    },
+                    "visibility": 10000,
+                    "pop": 0.2,
+                    "sys": {
+                        "pod": "n"
+                    },
+                    "dt_txt": "2021-08-31 18:00:00"
+                },
+                {
+                    "dt": 1630443600,
+                    "main": {
+                        "temp": 286.08,
+                        "feels_like": 285.91,
+                        "temp_min": 286.08,
+                        "temp_max": 286.08,
+                        "pressure": 1009,
+                        "sea_level": 1009,
+                        "grnd_level": 983,
+                        "humidity": 95,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 802,
+                            "main": "Clouds",
+                            "description": "scattered clouds",
+                            "icon": "03n"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 36
+                    },
+                    "wind": {
+                        "speed": 2.78,
+                        "deg": 268,
+                        "gust": 5.39
+                    },
+                    "visibility": 10000,
+                    "pop": 0.07,
+                    "sys": {
+                        "pod": "n"
+                    },
+                    "dt_txt": "2021-08-31 21:00:00"
+                },
+                {
+                    "dt": 1630454400,
+                    "main": {
+                        "temp": 286.66,
+                        "feels_like": 286.6,
+                        "temp_min": 286.66,
+                        "temp_max": 286.66,
+                        "pressure": 1008,
+                        "sea_level": 1008,
+                        "grnd_level": 983,
+                        "humidity": 97,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 500,
+                            "main": "Rain",
+                            "description": "light rain",
+                            "icon": "10n"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 61
+                    },
+                    "wind": {
+                        "speed": 2.56,
+                        "deg": 280,
+                        "gust": 4.77
+                    },
+                    "visibility": 10000,
+                    "pop": 0.23,
+                    "rain": {
+                        "3h": 0.18
+                    },
+                    "sys": {
+                        "pod": "n"
+                    },
+                    "dt_txt": "2021-09-01 00:00:00"
+                },
+                {
+                    "dt": 1630465200,
+                    "main": {
+                        "temp": 286.48,
+                        "feels_like": 286.4,
+                        "temp_min": 286.48,
+                        "temp_max": 286.48,
+                        "pressure": 1008,
+                        "sea_level": 1008,
+                        "grnd_level": 982,
+                        "humidity": 97,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 500,
+                            "main": "Rain",
+                            "description": "light rain",
+                            "icon": "10n"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 84
+                    },
+                    "wind": {
+                        "speed": 2.91,
+                        "deg": 293,
+                        "gust": 6.07
+                    },
+                    "visibility": 10000,
+                    "pop": 0.34,
+                    "rain": {
+                        "3h": 0.25
+                    },
+                    "sys": {
+                        "pod": "n"
+                    },
+                    "dt_txt": "2021-09-01 03:00:00"
+                },
+                {
+                    "dt": 1630476000,
+                    "main": {
+                        "temp": 287.02,
+                        "feels_like": 286.97,
+                        "temp_min": 287.02,
+                        "temp_max": 287.02,
+                        "pressure": 1008,
+                        "sea_level": 1008,
+                        "grnd_level": 982,
+                        "humidity": 96,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 500,
+                            "main": "Rain",
+                            "description": "light rain",
+                            "icon": "10d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 90
+                    },
+                    "wind": {
+                        "speed": 3.83,
+                        "deg": 316,
+                        "gust": 6.41
+                    },
+                    "visibility": 10000,
+                    "pop": 0.34,
+                    "rain": {
+                        "3h": 0.26
+                    },
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-01 06:00:00"
+                },
+                {
+                    "dt": 1630486800,
+                    "main": {
+                        "temp": 286.4,
+                        "feels_like": 286.24,
+                        "temp_min": 286.4,
+                        "temp_max": 286.4,
+                        "pressure": 1009,
+                        "sea_level": 1009,
+                        "grnd_level": 984,
+                        "humidity": 94,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 500,
+                            "main": "Rain",
+                            "description": "light rain",
+                            "icon": "10d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 100
+                    },
+                    "wind": {
+                        "speed": 4.27,
+                        "deg": 344,
+                        "gust": 7.32
+                    },
+                    "visibility": 10000,
+                    "pop": 0.83,
+                    "rain": {
+                        "3h": 0.67
+                    },
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-01 09:00:00"
+                },
+                {
+                    "dt": 1630497600,
+                    "main": {
+                        "temp": 286.55,
+                        "feels_like": 286.32,
+                        "temp_min": 286.55,
+                        "temp_max": 286.55,
+                        "pressure": 1010,
+                        "sea_level": 1010,
+                        "grnd_level": 984,
+                        "humidity": 91,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 500,
+                            "main": "Rain",
+                            "description": "light rain",
+                            "icon": "10d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 100
+                    },
+                    "wind": {
+                        "speed": 4.02,
+                        "deg": 335,
+                        "gust": 8.76
+                    },
+                    "visibility": 10000,
+                    "pop": 0.78,
+                    "rain": {
+                        "3h": 0.61
+                    },
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-01 12:00:00"
+                },
+                {
+                    "dt": 1630508400,
+                    "main": {
+                        "temp": 288.93,
+                        "feels_like": 288.52,
+                        "temp_min": 288.93,
+                        "temp_max": 288.93,
+                        "pressure": 1010,
+                        "sea_level": 1010,
+                        "grnd_level": 984,
+                        "humidity": 75,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 500,
+                            "main": "Rain",
+                            "description": "light rain",
+                            "icon": "10d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 100
+                    },
+                    "wind": {
+                        "speed": 5.63,
+                        "deg": 333,
+                        "gust": 9.29
+                    },
+                    "visibility": 10000,
+                    "pop": 0.2,
+                    "rain": {
+                        "3h": 0.11
+                    },
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-01 15:00:00"
+                },
+                {
+                    "dt": 1630519200,
+                    "main": {
+                        "temp": 286.12,
+                        "feels_like": 285.61,
+                        "temp_min": 286.12,
+                        "temp_max": 286.12,
+                        "pressure": 1011,
+                        "sea_level": 1011,
+                        "grnd_level": 985,
+                        "humidity": 82,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 804,
+                            "main": "Clouds",
+                            "description": "overcast clouds",
+                            "icon": "04n"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 100
+                    },
+                    "wind": {
+                        "speed": 4.56,
+                        "deg": 322,
+                        "gust": 10.88
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "n"
+                    },
+                    "dt_txt": "2021-09-01 18:00:00"
+                },
+                {
+                    "dt": 1630530000,
+                    "main": {
+                        "temp": 284.26,
+                        "feels_like": 283.54,
+                        "temp_min": 284.26,
+                        "temp_max": 284.26,
+                        "pressure": 1012,
+                        "sea_level": 1012,
+                        "grnd_level": 986,
+                        "humidity": 81,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 804,
+                            "main": "Clouds",
+                            "description": "overcast clouds",
+                            "icon": "04n"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 100
+                    },
+                    "wind": {
+                        "speed": 6.21,
+                        "deg": 322,
+                        "gust": 11.47
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "n"
+                    },
+                    "dt_txt": "2021-09-01 21:00:00"
+                },
+                {
+                    "dt": 1630540800,
+                    "main": {
+                        "temp": 282.12,
+                        "feels_like": 278.85,
+                        "temp_min": 282.12,
+                        "temp_max": 282.12,
+                        "pressure": 1013,
+                        "sea_level": 1013,
+                        "grnd_level": 986,
+                        "humidity": 83,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 804,
+                            "main": "Clouds",
+                            "description": "overcast clouds",
+                            "icon": "04n"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 100
+                    },
+                    "wind": {
+                        "speed": 6.72,
+                        "deg": 321,
+                        "gust": 12.57
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "n"
+                    },
+                    "dt_txt": "2021-09-02 00:00:00"
+                },
+                {
+                    "dt": 1630551600,
+                    "main": {
+                        "temp": 282.52,
+                        "feels_like": 279.5,
+                        "temp_min": 282.52,
+                        "temp_max": 282.52,
+                        "pressure": 1013,
+                        "sea_level": 1013,
+                        "grnd_level": 987,
+                        "humidity": 76,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 804,
+                            "main": "Clouds",
+                            "description": "overcast clouds",
+                            "icon": "04n"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 100
+                    },
+                    "wind": {
+                        "speed": 6.28,
+                        "deg": 326,
+                        "gust": 11.81
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "n"
+                    },
+                    "dt_txt": "2021-09-02 03:00:00"
+                },
+                {
+                    "dt": 1630562400,
+                    "main": {
+                        "temp": 283.28,
+                        "feels_like": 282.23,
+                        "temp_min": 283.28,
+                        "temp_max": 283.28,
+                        "pressure": 1014,
+                        "sea_level": 1014,
+                        "grnd_level": 988,
+                        "humidity": 72,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 804,
+                            "main": "Clouds",
+                            "description": "overcast clouds",
+                            "icon": "04d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 87
+                    },
+                    "wind": {
+                        "speed": 6.95,
+                        "deg": 331,
+                        "gust": 10.76
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-02 06:00:00"
+                },
+                {
+                    "dt": 1630573200,
+                    "main": {
+                        "temp": 286.2,
+                        "feels_like": 285,
+                        "temp_min": 286.2,
+                        "temp_max": 286.2,
+                        "pressure": 1015,
+                        "sea_level": 1015,
+                        "grnd_level": 989,
+                        "humidity": 55,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 801,
+                            "main": "Clouds",
+                            "description": "few clouds",
+                            "icon": "02d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 15
+                    },
+                    "wind": {
+                        "speed": 6.51,
+                        "deg": 335,
+                        "gust": 8.2
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-02 09:00:00"
+                },
+                {
+                    "dt": 1630584000,
+                    "main": {
+                        "temp": 286.35,
+                        "feels_like": 285.14,
+                        "temp_min": 286.35,
+                        "temp_max": 286.35,
+                        "pressure": 1015,
+                        "sea_level": 1015,
+                        "grnd_level": 990,
+                        "humidity": 54,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 803,
+                            "main": "Clouds",
+                            "description": "broken clouds",
+                            "icon": "04d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 56
+                    },
+                    "wind": {
+                        "speed": 6.43,
+                        "deg": 325,
+                        "gust": 8.75
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-02 12:00:00"
+                },
+                {
+                    "dt": 1630594800,
+                    "main": {
+                        "temp": 286.2,
+                        "feels_like": 285,
+                        "temp_min": 286.2,
+                        "temp_max": 286.2,
+                        "pressure": 1016,
+                        "sea_level": 1016,
+                        "grnd_level": 990,
+                        "humidity": 55,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 804,
+                            "main": "Clouds",
+                            "description": "overcast clouds",
+                            "icon": "04d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 88
+                    },
+                    "wind": {
+                        "speed": 4.38,
+                        "deg": 323,
+                        "gust": 9.54
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-02 15:00:00"
+                },
+                {
+                    "dt": 1630605600,
+                    "main": {
+                        "temp": 281.95,
+                        "feels_like": 279.89,
+                        "temp_min": 281.95,
+                        "temp_max": 281.95,
+                        "pressure": 1017,
+                        "sea_level": 1017,
+                        "grnd_level": 991,
+                        "humidity": 80,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 803,
+                            "main": "Clouds",
+                            "description": "broken clouds",
+                            "icon": "04n"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 69
+                    },
+                    "wind": {
+                        "speed": 3.58,
+                        "deg": 307,
+                        "gust": 7.88
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "n"
+                    },
+                    "dt_txt": "2021-09-02 18:00:00"
+                },
+                {
+                    "dt": 1630616400,
+                    "main": {
+                        "temp": 281.91,
+                        "feels_like": 280.13,
+                        "temp_min": 281.91,
+                        "temp_max": 281.91,
+                        "pressure": 1018,
+                        "sea_level": 1018,
+                        "grnd_level": 991,
+                        "humidity": 79,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 803,
+                            "main": "Clouds",
+                            "description": "broken clouds",
+                            "icon": "04n"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 60
+                    },
+                    "wind": {
+                        "speed": 3.07,
+                        "deg": 299,
+                        "gust": 6.39
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "n"
+                    },
+                    "dt_txt": "2021-09-02 21:00:00"
+                },
+                {
+                    "dt": 1630627200,
+                    "main": {
+                        "temp": 282.44,
+                        "feels_like": 280.3,
+                        "temp_min": 282.44,
+                        "temp_max": 282.44,
+                        "pressure": 1017,
+                        "sea_level": 1017,
+                        "grnd_level": 991,
+                        "humidity": 78,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 803,
+                            "main": "Clouds",
+                            "description": "broken clouds",
+                            "icon": "04n"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 77
+                    },
+                    "wind": {
+                        "speed": 3.96,
+                        "deg": 302,
+                        "gust": 9.73
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "n"
+                    },
+                    "dt_txt": "2021-09-03 00:00:00"
+                },
+                {
+                    "dt": 1630638000,
+                    "main": {
+                        "temp": 279.91,
+                        "feels_like": 277.44,
+                        "temp_min": 279.91,
+                        "temp_max": 279.91,
+                        "pressure": 1017,
+                        "sea_level": 1017,
+                        "grnd_level": 991,
+                        "humidity": 92,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 801,
+                            "main": "Clouds",
+                            "description": "few clouds",
+                            "icon": "02n"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 17
+                    },
+                    "wind": {
+                        "speed": 3.52,
+                        "deg": 293,
+                        "gust": 8.46
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "n"
+                    },
+                    "dt_txt": "2021-09-03 03:00:00"
+                },
+                {
+                    "dt": 1630648800,
+                    "main": {
+                        "temp": 282.55,
+                        "feels_like": 280.36,
+                        "temp_min": 282.55,
+                        "temp_max": 282.55,
+                        "pressure": 1017,
+                        "sea_level": 1017,
+                        "grnd_level": 991,
+                        "humidity": 79,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 802,
+                            "main": "Clouds",
+                            "description": "scattered clouds",
+                            "icon": "03d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 47
+                    },
+                    "wind": {
+                        "speed": 4.12,
+                        "deg": 285,
+                        "gust": 9.12
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-03 06:00:00"
+                },
+                {
+                    "dt": 1630659600,
+                    "main": {
+                        "temp": 287.69,
+                        "feels_like": 287.03,
+                        "temp_min": 287.69,
+                        "temp_max": 287.69,
+                        "pressure": 1015,
+                        "sea_level": 1015,
+                        "grnd_level": 990,
+                        "humidity": 70,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 804,
+                            "main": "Clouds",
+                            "description": "overcast clouds",
+                            "icon": "04d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 99
+                    },
+                    "wind": {
+                        "speed": 5.9,
+                        "deg": 288,
+                        "gust": 7.52
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-03 09:00:00"
+                },
+                {
+                    "dt": 1630670400,
+                    "main": {
+                        "temp": 289.79,
+                        "feels_like": 289.05,
+                        "temp_min": 289.79,
+                        "temp_max": 289.79,
+                        "pressure": 1013,
+                        "sea_level": 1013,
+                        "grnd_level": 988,
+                        "humidity": 59,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 804,
+                            "main": "Clouds",
+                            "description": "overcast clouds",
+                            "icon": "04d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 94
+                    },
+                    "wind": {
+                        "speed": 6.39,
+                        "deg": 267,
+                        "gust": 8.46
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-03 12:00:00"
+                },
+                {
+                    "dt": 1630681200,
+                    "main": {
+                        "temp": 289.2,
+                        "feels_like": 288.56,
+                        "temp_min": 289.2,
+                        "temp_max": 289.2,
+                        "pressure": 1011,
+                        "sea_level": 1011,
+                        "grnd_level": 986,
+                        "humidity": 65,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 804,
+                            "main": "Clouds",
+                            "description": "overcast clouds",
+                            "icon": "04d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 100
+                    },
+                    "wind": {
+                        "speed": 7.43,
+                        "deg": 256,
+                        "gust": 11.41
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-03 15:00:00"
+                },
+                {
+                    "dt": 1630692000,
+                    "main": {
+                        "temp": 286.31,
+                        "feels_like": 285.61,
+                        "temp_min": 286.31,
+                        "temp_max": 286.31,
+                        "pressure": 1010,
+                        "sea_level": 1010,
+                        "grnd_level": 984,
+                        "humidity": 74,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 803,
+                            "main": "Clouds",
+                            "description": "broken clouds",
+                            "icon": "04n"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 67
+                    },
+                    "wind": {
+                        "speed": 6.46,
+                        "deg": 250,
+                        "gust": 14.47
+                    },
+                    "visibility": 10000,
+                    "pop": 0.02,
+                    "sys": {
+                        "pod": "n"
+                    },
+                    "dt_txt": "2021-09-03 18:00:00"
+                },
+                {
+                    "dt": 1630702800,
+                    "main": {
+                        "temp": 285.36,
+                        "feels_like": 284.96,
+                        "temp_min": 285.36,
+                        "temp_max": 285.36,
+                        "pressure": 1009,
+                        "sea_level": 1009,
+                        "grnd_level": 983,
+                        "humidity": 89,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 500,
+                            "main": "Rain",
+                            "description": "light rain",
+                            "icon": "10n"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 78
+                    },
+                    "wind": {
+                        "speed": 5.17,
+                        "deg": 288,
+                        "gust": 10.88
+                    },
+                    "visibility": 10000,
+                    "pop": 0.72,
+                    "rain": {
+                        "3h": 1.13
+                    },
+                    "sys": {
+                        "pod": "n"
+                    },
+                    "dt_txt": "2021-09-03 21:00:00"
+                },
+                {
+                    "dt": 1630713600,
+                    "main": {
+                        "temp": 282.47,
+                        "feels_like": 279.84,
+                        "temp_min": 282.47,
+                        "temp_max": 282.47,
+                        "pressure": 1010,
+                        "sea_level": 1010,
+                        "grnd_level": 984,
+                        "humidity": 87,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 500,
+                            "main": "Rain",
+                            "description": "light rain",
+                            "icon": "10n"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 84
+                    },
+                    "wind": {
+                        "speed": 5.12,
+                        "deg": 342,
+                        "gust": 10.33
+                    },
+                    "visibility": 10000,
+                    "pop": 0.79,
+                    "rain": {
+                        "3h": 0.75
+                    },
+                    "sys": {
+                        "pod": "n"
+                    },
+                    "dt_txt": "2021-09-04 00:00:00"
+                },
+                {
+                    "dt": 1630724400,
+                    "main": {
+                        "temp": 280.08,
+                        "feels_like": 277.09,
+                        "temp_min": 280.08,
+                        "temp_max": 280.08,
+                        "pressure": 1012,
+                        "sea_level": 1012,
+                        "grnd_level": 985,
+                        "humidity": 88,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 801,
+                            "main": "Clouds",
+                            "description": "few clouds",
+                            "icon": "02n"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 19
+                    },
+                    "wind": {
+                        "speed": 4.58,
+                        "deg": 345,
+                        "gust": 10.54
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "n"
+                    },
+                    "dt_txt": "2021-09-04 03:00:00"
+                },
+                {
+                    "dt": 1630735200,
+                    "main": {
+                        "temp": 281.16,
+                        "feels_like": 277.91,
+                        "temp_min": 281.16,
+                        "temp_max": 281.16,
+                        "pressure": 1014,
+                        "sea_level": 1014,
+                        "grnd_level": 988,
+                        "humidity": 76,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 801,
+                            "main": "Clouds",
+                            "description": "few clouds",
+                            "icon": "02d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 14
+                    },
+                    "wind": {
+                        "speed": 5.88,
+                        "deg": 344,
+                        "gust": 10.56
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-04 06:00:00"
+                },
+                {
+                    "dt": 1630746000,
+                    "main": {
+                        "temp": 284.97,
+                        "feels_like": 283.62,
+                        "temp_min": 284.97,
+                        "temp_max": 284.97,
+                        "pressure": 1015,
+                        "sea_level": 1015,
+                        "grnd_level": 989,
+                        "humidity": 54,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 800,
+                            "main": "Clear",
+                            "description": "clear sky",
+                            "icon": "01d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 3
+                    },
+                    "wind": {
+                        "speed": 6.74,
+                        "deg": 331,
+                        "gust": 9.08
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-04 09:00:00"
+                },
+                {
+                    "dt": 1630756800,
+                    "main": {
+                        "temp": 287.23,
+                        "feels_like": 285.89,
+                        "temp_min": 287.23,
+                        "temp_max": 287.23,
+                        "pressure": 1015,
+                        "sea_level": 1015,
+                        "grnd_level": 990,
+                        "humidity": 46,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 800,
+                            "main": "Clear",
+                            "description": "clear sky",
+                            "icon": "01d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 7
+                    },
+                    "wind": {
+                        "speed": 6.72,
+                        "deg": 328,
+                        "gust": 9.41
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-04 12:00:00"
+                },
+                {
+                    "dt": 1630767600,
+                    "main": {
+                        "temp": 285.75,
+                        "feels_like": 284.55,
+                        "temp_min": 285.75,
+                        "temp_max": 285.75,
+                        "pressure": 1016,
+                        "sea_level": 1016,
+                        "grnd_level": 990,
+                        "humidity": 57,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 803,
+                            "main": "Clouds",
+                            "description": "broken clouds",
+                            "icon": "04d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 64
+                    },
+                    "wind": {
+                        "speed": 6.09,
+                        "deg": 308,
+                        "gust": 8.4
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-04 15:00:00"
+                },
+                {
+                    "dt": 1630778400,
+                    "main": {
+                        "temp": 281.57,
+                        "feels_like": 279.23,
+                        "temp_min": 281.57,
+                        "temp_max": 281.57,
+                        "pressure": 1017,
+                        "sea_level": 1017,
+                        "grnd_level": 991,
+                        "humidity": 75,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 802,
+                            "main": "Clouds",
+                            "description": "scattered clouds",
+                            "icon": "03n"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 43
+                    },
+                    "wind": {
+                        "speed": 3.97,
+                        "deg": 286,
+                        "gust": 9.74
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "n"
+                    },
+                    "dt_txt": "2021-09-04 18:00:00"
+                },
+                {
+                    "dt": 1630789200,
+                    "main": {
+                        "temp": 279.96,
+                        "feels_like": 277.25,
+                        "temp_min": 279.96,
+                        "temp_max": 279.96,
+                        "pressure": 1019,
+                        "sea_level": 1019,
+                        "grnd_level": 992,
+                        "humidity": 78,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 800,
+                            "main": "Clear",
+                            "description": "clear sky",
+                            "icon": "01d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 3
+                    },
+                    "wind": {
+                        "speed": 3.96,
+                        "deg": 319,
+                        "gust": 9.56
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-04 21:00:00"
+                },
+                {
+                    "dt": 1630800000,
+                    "main": {
+                        "temp": 278.09,
+                        "feels_like": 275.71,
+                        "temp_min": 278.09,
+                        "temp_max": 278.09,
+                        "pressure": 1020,
+                        "sea_level": 1020,
+                        "grnd_level": 993,
+                        "humidity": 87,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 800,
+                            "main": "Clear",
+                            "description": "clear sky",
+                            "icon": "01d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 2
+                    },
+                    "wind": {
+                        "speed": 2.83,
+                        "deg": 336,
+                        "gust": 4.61
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-05 00:00:00"
+                },
+                {
+                    "dt": 1630810800,
+                    "main": {
+                        "temp": 277.37,
+                        "feels_like": 274.4,
+                        "temp_min": 277.37,
+                        "temp_max": 277.37,
+                        "pressure": 1021,
+                        "sea_level": 1021,
+                        "grnd_level": 994,
+                        "humidity": 84,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 800,
+                            "main": "Clear",
+                            "description": "clear sky",
+                            "icon": "01d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 7
+                    },
+                    "wind": {
+                        "speed": 3.45,
+                        "deg": 330,
+                        "gust": 7.47
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-05 03:00:00"
+                },
+                {
+                    "dt": 1630821600,
+                    "main": {
+                        "temp": 280.45,
+                        "feels_like": 277.56,
+                        "temp_min": 280.45,
+                        "temp_max": 280.45,
+                        "pressure": 1022,
+                        "sea_level": 1022,
+                        "grnd_level": 996,
+                        "humidity": 62,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 800,
+                            "main": "Clear",
+                            "description": "clear sky",
+                            "icon": "01d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 4
+                    },
+                    "wind": {
+                        "speed": 4.55,
+                        "deg": 349,
+                        "gust": 8.6
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-05 06:00:00"
+                },
+                {
+                    "dt": 1630832400,
+                    "main": {
+                        "temp": 283.97,
+                        "feels_like": 282.41,
+                        "temp_min": 283.97,
+                        "temp_max": 283.97,
+                        "pressure": 1023,
+                        "sea_level": 1023,
+                        "grnd_level": 997,
+                        "humidity": 50,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 800,
+                            "main": "Clear",
+                            "description": "clear sky",
+                            "icon": "01d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 3
+                    },
+                    "wind": {
+                        "speed": 5.01,
+                        "deg": 344,
+                        "gust": 6.85
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-05 09:00:00"
+                },
+                {
+                    "dt": 1630843200,
+                    "main": {
+                        "temp": 285.93,
+                        "feels_like": 284.41,
+                        "temp_min": 285.93,
+                        "temp_max": 285.93,
+                        "pressure": 1023,
+                        "sea_level": 1023,
+                        "grnd_level": 997,
+                        "humidity": 44,
+                        "temp_kf": 0
+                    },
+                    "weather": [
+                        {
+                            "id": 800,
+                            "main": "Clear",
+                            "description": "clear sky",
+                            "icon": "01d"
+                        }
+                    ],
+                    "clouds": {
+                        "all": 5
+                    },
+                    "wind": {
+                        "speed": 5.01,
+                        "deg": 339,
+                        "gust": 6.69
+                    },
+                    "visibility": 10000,
+                    "pop": 0,
+                    "sys": {
+                        "pod": "d"
+                    },
+                    "dt_txt": "2021-09-05 12:00:00"
+                }
+            ],
+            "city": {
+                "id": 625144,
+                "name": "Minsk",
+                "coord": {
+                    "lat": 53.9,
+                    "lon": 27.5667
+                },
+                "country": "BY",
+                "population": 1742124,
+                "timezone": 10800,
+                "sunrise": 1630379795,
+                "sunset": 1630429439
+            }
+        }
+    ],
+    "required": [
+        "cod",
+        "message",
+        "cnt",
+        "list",
+        "city"
+    ],
+    "properties": {
+        "cod": {
+            "$id": "#/properties/cod",
+            "type": "string",
+            "title": "The cod schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "200"
+            ]
+        },
+        "message": {
+            "$id": "#/properties/message",
+            "type": "integer",
+            "title": "The message schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                0
+            ]
+        },
+        "cnt": {
+            "$id": "#/properties/cnt",
+            "type": "integer",
+            "title": "The cnt schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                40
+            ]
+        },
+        "list": {
+            "$id": "#/properties/list",
+            "type": "array",
+            "title": "The list schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "dt": 1630422000,
+                        "main": {
+                            "temp": 292.16,
+                            "feels_like": 292,
+                            "temp_min": 292.16,
+                            "temp_max": 292.47,
+                            "pressure": 1008,
+                            "sea_level": 1008,
+                            "grnd_level": 983,
+                            "humidity": 72,
+                            "temp_kf": -0.31
+                        },
+                        "weather": [
+                            {
+                                "id": 500,
+                                "main": "Rain",
+                                "description": "light rain",
+                                "icon": "10d"
+                            }
+                        ],
+                        "clouds": {
+                            "all": 83
+                        },
+                        "wind": {
+                            "speed": 3.38,
+                            "deg": 253,
+                            "gust": 5.42
+                        },
+                        "visibility": 10000,
+                        "pop": 0.26,
+                        "rain": {
+                            "3h": 0.15
+                        },
+                        "sys": {
+                            "pod": "d"
+                        },
+                        "dt_txt": "2021-08-31 15:00:00"
+                    },
+                    {
+                        "dt": 1630432800,
+                        "main": {
+                            "temp": 289.01,
+                            "feels_like": 288.84,
+                            "temp_min": 287.51,
+                            "temp_max": 289.01,
+                            "pressure": 1009,
+                            "sea_level": 1009,
+                            "grnd_level": 983,
+                            "humidity": 84,
+                            "temp_kf": 1.5
+                        },
+                        "weather": [
+                            {
+                                "id": 803,
+                                "main": "Clouds",
+                                "description": "broken clouds",
+                                "icon": "04n"
+                            }
+                        ],
+                        "clouds": {
+                            "all": 55
+                        },
+                        "wind": {
+                            "speed": 3.04,
+                            "deg": 258,
+                            "gust": 6.05
+                        },
+                        "visibility": 10000,
+                        "pop": 0.2,
+                        "sys": {
+                            "pod": "n"
+                        },
+                        "dt_txt": "2021-08-31 18:00:00"
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/list/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/list/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "dt": 1630422000,
+                                "main": {
+                                    "temp": 292.16,
+                                    "feels_like": 292,
+                                    "temp_min": 292.16,
+                                    "temp_max": 292.47,
+                                    "pressure": 1008,
+                                    "sea_level": 1008,
+                                    "grnd_level": 983,
+                                    "humidity": 72,
+                                    "temp_kf": -0.31
+                                },
+                                "weather": [
+                                    {
+                                        "id": 500,
+                                        "main": "Rain",
+                                        "description": "light rain",
+                                        "icon": "10d"
+                                    }
+                                ],
+                                "clouds": {
+                                    "all": 83
+                                },
+                                "wind": {
+                                    "speed": 3.38,
+                                    "deg": 253,
+                                    "gust": 5.42
+                                },
+                                "visibility": 10000,
+                                "pop": 0.26,
+                                "rain": {
+                                    "3h": 0.15
+                                },
+                                "sys": {
+                                    "pod": "d"
+                                },
+                                "dt_txt": "2021-08-31 15:00:00"
+                            }
+                        ],
+                        "required": [
+                            "dt",
+                            "main",
+                            "weather",
+                            "clouds",
+                            "wind",
+                            "visibility",
+                            "pop",
+                            "rain",
+                            "sys",
+                            "dt_txt"
+                        ],
+                        "properties": {
+                            "dt": {
+                                "$id": "#/properties/list/items/anyOf/0/properties/dt",
+                                "type": "integer",
+                                "title": "The dt schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    1630422000
+                                ]
+                            },
+                            "main": {
+                                "$id": "#/properties/list/items/anyOf/0/properties/main",
+                                "type": "object",
+                                "title": "The main schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "temp": 292.16,
+                                        "feels_like": 292,
+                                        "temp_min": 292.16,
+                                        "temp_max": 292.47,
+                                        "pressure": 1008,
+                                        "sea_level": 1008,
+                                        "grnd_level": 983,
+                                        "humidity": 72,
+                                        "temp_kf": -0.31
+                                    }
+                                ],
+                                "required": [
+                                    "temp",
+                                    "feels_like",
+                                    "temp_min",
+                                    "temp_max",
+                                    "pressure",
+                                    "sea_level",
+                                    "grnd_level",
+                                    "humidity",
+                                    "temp_kf"
+                                ],
+                                "properties": {
+                                    "temp": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/main/properties/temp",
+                                        "type": "number",
+                                        "title": "The temp schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            292.16
+                                        ]
+                                    },
+                                    "feels_like": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/main/properties/feels_like",
+                                        "type": "integer",
+                                        "title": "The feels_like schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            292
+                                        ]
+                                    },
+                                    "temp_min": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/main/properties/temp_min",
+                                        "type": "number",
+                                        "title": "The temp_min schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            292.16
+                                        ]
+                                    },
+                                    "temp_max": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/main/properties/temp_max",
+                                        "type": "number",
+                                        "title": "The temp_max schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            292.47
+                                        ]
+                                    },
+                                    "pressure": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/main/properties/pressure",
+                                        "type": "integer",
+                                        "title": "The pressure schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            1008
+                                        ]
+                                    },
+                                    "sea_level": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/main/properties/sea_level",
+                                        "type": "integer",
+                                        "title": "The sea_level schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            1008
+                                        ]
+                                    },
+                                    "grnd_level": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/main/properties/grnd_level",
+                                        "type": "integer",
+                                        "title": "The grnd_level schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            983
+                                        ]
+                                    },
+                                    "humidity": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/main/properties/humidity",
+                                        "type": "integer",
+                                        "title": "The humidity schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            72
+                                        ]
+                                    },
+                                    "temp_kf": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/main/properties/temp_kf",
+                                        "type": "number",
+                                        "title": "The temp_kf schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            -0.31
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            },
+                            "weather": {
+                                "$id": "#/properties/list/items/anyOf/0/properties/weather",
+                                "type": "array",
+                                "title": "The weather schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": [],
+                                "examples": [
+                                    [
+                                        {
+                                            "id": 500,
+                                            "main": "Rain",
+                                            "description": "light rain",
+                                            "icon": "10d"
+                                        }
+                                    ]
+                                ],
+                                "additionalItems": true,
+                                "items": {
+                                    "$id": "#/properties/list/items/anyOf/0/properties/weather/items",
+                                    "anyOf": [
+                                        {
+                                            "$id": "#/properties/list/items/anyOf/0/properties/weather/items/anyOf/0",
+                                            "type": "object",
+                                            "title": "The first anyOf schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": {},
+                                            "examples": [
+                                                {
+                                                    "id": 500,
+                                                    "main": "Rain",
+                                                    "description": "light rain",
+                                                    "icon": "10d"
+                                                }
+                                            ],
+                                            "required": [
+                                                "id",
+                                                "main",
+                                                "description",
+                                                "icon"
+                                            ],
+                                            "properties": {
+                                                "id": {
+                                                    "$id": "#/properties/list/items/anyOf/0/properties/weather/items/anyOf/0/properties/id",
+                                                    "type": "integer",
+                                                    "title": "The id schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        500
+                                                    ]
+                                                },
+                                                "main": {
+                                                    "$id": "#/properties/list/items/anyOf/0/properties/weather/items/anyOf/0/properties/main",
+                                                    "type": "string",
+                                                    "title": "The main schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "Rain"
+                                                    ]
+                                                },
+                                                "description": {
+                                                    "$id": "#/properties/list/items/anyOf/0/properties/weather/items/anyOf/0/properties/description",
+                                                    "type": "string",
+                                                    "title": "The description schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "light rain"
+                                                    ]
+                                                },
+                                                "icon": {
+                                                    "$id": "#/properties/list/items/anyOf/0/properties/weather/items/anyOf/0/properties/icon",
+                                                    "type": "string",
+                                                    "title": "The icon schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "10d"
+                                                    ]
+                                                }
+                                            },
+                                            "additionalProperties": true
+                                        }
+                                    ]
+                                }
+                            },
+                            "clouds": {
+                                "$id": "#/properties/list/items/anyOf/0/properties/clouds",
+                                "type": "object",
+                                "title": "The clouds schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "all": 83
+                                    }
+                                ],
+                                "required": [
+                                    "all"
+                                ],
+                                "properties": {
+                                    "all": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/clouds/properties/all",
+                                        "type": "integer",
+                                        "title": "The all schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            83
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            },
+                            "wind": {
+                                "$id": "#/properties/list/items/anyOf/0/properties/wind",
+                                "type": "object",
+                                "title": "The wind schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "speed": 3.38,
+                                        "deg": 253,
+                                        "gust": 5.42
+                                    }
+                                ],
+                                "required": [
+                                    "speed",
+                                    "deg",
+                                    "gust"
+                                ],
+                                "properties": {
+                                    "speed": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/wind/properties/speed",
+                                        "type": "number",
+                                        "title": "The speed schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            3.38
+                                        ]
+                                    },
+                                    "deg": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/wind/properties/deg",
+                                        "type": "integer",
+                                        "title": "The deg schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            253
+                                        ]
+                                    },
+                                    "gust": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/wind/properties/gust",
+                                        "type": "number",
+                                        "title": "The gust schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            5.42
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            },
+                            "visibility": {
+                                "$id": "#/properties/list/items/anyOf/0/properties/visibility",
+                                "type": "integer",
+                                "title": "The visibility schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    10000
+                                ]
+                            },
+                            "pop": {
+                                "$id": "#/properties/list/items/anyOf/0/properties/pop",
+                                "type": "number",
+                                "title": "The pop schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0.0,
+                                "examples": [
+                                    0.26
+                                ]
+                            },
+                            "rain": {
+                                "$id": "#/properties/list/items/anyOf/0/properties/rain",
+                                "type": "object",
+                                "title": "The rain schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "3h": 0.15
+                                    }
+                                ],
+                                "required": [
+                                    "3h"
+                                ],
+                                "properties": {
+                                    "3h": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/rain/properties/3h",
+                                        "type": "number",
+                                        "title": "The 3h schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            0.15
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            },
+                            "sys": {
+                                "$id": "#/properties/list/items/anyOf/0/properties/sys",
+                                "type": "object",
+                                "title": "The sys schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "pod": "d"
+                                    }
+                                ],
+                                "required": [
+                                    "pod"
+                                ],
+                                "properties": {
+                                    "pod": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/sys/properties/pod",
+                                        "type": "string",
+                                        "title": "The pod schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "d"
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            },
+                            "dt_txt": {
+                                "$id": "#/properties/list/items/anyOf/0/properties/dt_txt",
+                                "type": "string",
+                                "title": "The dt_txt schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "2021-08-31 15:00:00"
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    },
+                    {
+                        "$id": "#/properties/list/items/anyOf/1",
+                        "type": "object",
+                        "title": "The second anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "dt": 1630432800,
+                                "main": {
+                                    "temp": 289.01,
+                                    "feels_like": 288.84,
+                                    "temp_min": 287.51,
+                                    "temp_max": 289.01,
+                                    "pressure": 1009,
+                                    "sea_level": 1009,
+                                    "grnd_level": 983,
+                                    "humidity": 84,
+                                    "temp_kf": 1.5
+                                },
+                                "weather": [
+                                    {
+                                        "id": 803,
+                                        "main": "Clouds",
+                                        "description": "broken clouds",
+                                        "icon": "04n"
+                                    }
+                                ],
+                                "clouds": {
+                                    "all": 55
+                                },
+                                "wind": {
+                                    "speed": 3.04,
+                                    "deg": 258,
+                                    "gust": 6.05
+                                },
+                                "visibility": 10000,
+                                "pop": 0.2,
+                                "sys": {
+                                    "pod": "n"
+                                },
+                                "dt_txt": "2021-08-31 18:00:00"
+                            }
+                        ],
+                        "required": [
+                            "dt",
+                            "main",
+                            "weather",
+                            "clouds",
+                            "wind",
+                            "visibility",
+                            "pop",
+                            "sys",
+                            "dt_txt"
+                        ],
+                        "properties": {
+                            "dt": {
+                                "$id": "#/properties/list/items/anyOf/1/properties/dt",
+                                "type": "integer",
+                                "title": "The dt schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    1630432800
+                                ]
+                            },
+                            "main": {
+                                "$id": "#/properties/list/items/anyOf/1/properties/main",
+                                "type": "object",
+                                "title": "The main schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "temp": 289.01,
+                                        "feels_like": 288.84,
+                                        "temp_min": 287.51,
+                                        "temp_max": 289.01,
+                                        "pressure": 1009,
+                                        "sea_level": 1009,
+                                        "grnd_level": 983,
+                                        "humidity": 84,
+                                        "temp_kf": 1.5
+                                    }
+                                ],
+                                "required": [
+                                    "temp",
+                                    "feels_like",
+                                    "temp_min",
+                                    "temp_max",
+                                    "pressure",
+                                    "sea_level",
+                                    "grnd_level",
+                                    "humidity",
+                                    "temp_kf"
+                                ],
+                                "properties": {
+                                    "temp": {
+                                        "$id": "#/properties/list/items/anyOf/1/properties/main/properties/temp",
+                                        "type": "number",
+                                        "title": "The temp schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            289.01
+                                        ]
+                                    },
+                                    "feels_like": {
+                                        "$id": "#/properties/list/items/anyOf/1/properties/main/properties/feels_like",
+                                        "type": "number",
+                                        "title": "The feels_like schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            288.84
+                                        ]
+                                    },
+                                    "temp_min": {
+                                        "$id": "#/properties/list/items/anyOf/1/properties/main/properties/temp_min",
+                                        "type": "number",
+                                        "title": "The temp_min schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            287.51
+                                        ]
+                                    },
+                                    "temp_max": {
+                                        "$id": "#/properties/list/items/anyOf/1/properties/main/properties/temp_max",
+                                        "type": "number",
+                                        "title": "The temp_max schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            289.01
+                                        ]
+                                    },
+                                    "pressure": {
+                                        "$id": "#/properties/list/items/anyOf/1/properties/main/properties/pressure",
+                                        "type": "integer",
+                                        "title": "The pressure schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            1009
+                                        ]
+                                    },
+                                    "sea_level": {
+                                        "$id": "#/properties/list/items/anyOf/1/properties/main/properties/sea_level",
+                                        "type": "integer",
+                                        "title": "The sea_level schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            1009
+                                        ]
+                                    },
+                                    "grnd_level": {
+                                        "$id": "#/properties/list/items/anyOf/1/properties/main/properties/grnd_level",
+                                        "type": "integer",
+                                        "title": "The grnd_level schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            983
+                                        ]
+                                    },
+                                    "humidity": {
+                                        "$id": "#/properties/list/items/anyOf/1/properties/main/properties/humidity",
+                                        "type": "integer",
+                                        "title": "The humidity schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            84
+                                        ]
+                                    },
+                                    "temp_kf": {
+                                        "$id": "#/properties/list/items/anyOf/1/properties/main/properties/temp_kf",
+                                        "type": "number",
+                                        "title": "The temp_kf schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            1.5
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            },
+                            "weather": {
+                                "$id": "#/properties/list/items/anyOf/1/properties/weather",
+                                "type": "array",
+                                "title": "The weather schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": [],
+                                "examples": [
+                                    [
+                                        {
+                                            "id": 803,
+                                            "main": "Clouds",
+                                            "description": "broken clouds",
+                                            "icon": "04n"
+                                        }
+                                    ]
+                                ],
+                                "additionalItems": true,
+                                "items": {
+                                    "$id": "#/properties/list/items/anyOf/1/properties/weather/items",
+                                    "anyOf": [
+                                        {
+                                            "$id": "#/properties/list/items/anyOf/1/properties/weather/items/anyOf/0",
+                                            "type": "object",
+                                            "title": "The first anyOf schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": {},
+                                            "examples": [
+                                                {
+                                                    "id": 803,
+                                                    "main": "Clouds",
+                                                    "description": "broken clouds",
+                                                    "icon": "04n"
+                                                }
+                                            ],
+                                            "required": [
+                                                "id",
+                                                "main",
+                                                "description",
+                                                "icon"
+                                            ],
+                                            "properties": {
+                                                "id": {
+                                                    "$id": "#/properties/list/items/anyOf/1/properties/weather/items/anyOf/0/properties/id",
+                                                    "type": "integer",
+                                                    "title": "The id schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        803
+                                                    ]
+                                                },
+                                                "main": {
+                                                    "$id": "#/properties/list/items/anyOf/1/properties/weather/items/anyOf/0/properties/main",
+                                                    "type": "string",
+                                                    "title": "The main schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "Clouds"
+                                                    ]
+                                                },
+                                                "description": {
+                                                    "$id": "#/properties/list/items/anyOf/1/properties/weather/items/anyOf/0/properties/description",
+                                                    "type": "string",
+                                                    "title": "The description schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "broken clouds"
+                                                    ]
+                                                },
+                                                "icon": {
+                                                    "$id": "#/properties/list/items/anyOf/1/properties/weather/items/anyOf/0/properties/icon",
+                                                    "type": "string",
+                                                    "title": "The icon schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "04n"
+                                                    ]
+                                                }
+                                            },
+                                            "additionalProperties": true
+                                        }
+                                    ]
+                                }
+                            },
+                            "clouds": {
+                                "$id": "#/properties/list/items/anyOf/1/properties/clouds",
+                                "type": "object",
+                                "title": "The clouds schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "all": 55
+                                    }
+                                ],
+                                "required": [
+                                    "all"
+                                ],
+                                "properties": {
+                                    "all": {
+                                        "$id": "#/properties/list/items/anyOf/1/properties/clouds/properties/all",
+                                        "type": "integer",
+                                        "title": "The all schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            55
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            },
+                            "wind": {
+                                "$id": "#/properties/list/items/anyOf/1/properties/wind",
+                                "type": "object",
+                                "title": "The wind schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "speed": 3.04,
+                                        "deg": 258,
+                                        "gust": 6.05
+                                    }
+                                ],
+                                "required": [
+                                    "speed",
+                                    "deg",
+                                    "gust"
+                                ],
+                                "properties": {
+                                    "speed": {
+                                        "$id": "#/properties/list/items/anyOf/1/properties/wind/properties/speed",
+                                        "type": "number",
+                                        "title": "The speed schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            3.04
+                                        ]
+                                    },
+                                    "deg": {
+                                        "$id": "#/properties/list/items/anyOf/1/properties/wind/properties/deg",
+                                        "type": "integer",
+                                        "title": "The deg schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            258
+                                        ]
+                                    },
+                                    "gust": {
+                                        "$id": "#/properties/list/items/anyOf/1/properties/wind/properties/gust",
+                                        "type": "number",
+                                        "title": "The gust schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            6.05
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            },
+                            "visibility": {
+                                "$id": "#/properties/list/items/anyOf/1/properties/visibility",
+                                "type": "integer",
+                                "title": "The visibility schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    10000
+                                ]
+                            },
+                            "pop": {
+                                "$id": "#/properties/list/items/anyOf/1/properties/pop",
+                                "type": "number",
+                                "title": "The pop schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0.0,
+                                "examples": [
+                                    0.2
+                                ]
+                            },
+                            "sys": {
+                                "$id": "#/properties/list/items/anyOf/1/properties/sys",
+                                "type": "object",
+                                "title": "The sys schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "pod": "n"
+                                    }
+                                ],
+                                "required": [
+                                    "pod"
+                                ],
+                                "properties": {
+                                    "pod": {
+                                        "$id": "#/properties/list/items/anyOf/1/properties/sys/properties/pod",
+                                        "type": "string",
+                                        "title": "The pod schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "n"
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            },
+                            "dt_txt": {
+                                "$id": "#/properties/list/items/anyOf/1/properties/dt_txt",
+                                "type": "string",
+                                "title": "The dt_txt schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "2021-08-31 18:00:00"
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                ]
+            }
+        },
+        "city": {
+            "$id": "#/properties/city",
+            "type": "object",
+            "title": "The city schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "id": 625144,
+                    "name": "Minsk",
+                    "coord": {
+                        "lat": 53.9,
+                        "lon": 27.5667
+                    },
+                    "country": "BY",
+                    "population": 1742124,
+                    "timezone": 10800,
+                    "sunrise": 1630379795,
+                    "sunset": 1630429439
+                }
+            ],
+            "required": [
+                "id",
+                "name",
+                "coord",
+                "country",
+                "population",
+                "timezone",
+                "sunrise",
+                "sunset"
+            ],
+            "properties": {
+                "id": {
+                    "$id": "#/properties/city/properties/id",
+                    "type": "integer",
+                    "title": "The id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        625144
+                    ]
+                },
+                "name": {
+                    "$id": "#/properties/city/properties/name",
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Minsk"
+                    ]
+                },
+                "coord": {
+                    "$id": "#/properties/city/properties/coord",
+                    "type": "object",
+                    "title": "The coord schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "lat": 53.9,
+                            "lon": 27.5667
+                        }
+                    ],
+                    "required": [
+                        "lat",
+                        "lon"
+                    ],
+                    "properties": {
+                        "lat": {
+                            "$id": "#/properties/city/properties/coord/properties/lat",
+                            "type": "number",
+                            "title": "The lat schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": 0.0,
+                            "examples": [
+                                53.9
+                            ]
+                        },
+                        "lon": {
+                            "$id": "#/properties/city/properties/coord/properties/lon",
+                            "type": "number",
+                            "title": "The lon schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": 0.0,
+                            "examples": [
+                                27.5667
+                            ]
+                        }
+                    },
+                    "additionalProperties": true
+                },
+                "country": {
+                    "$id": "#/properties/city/properties/country",
+                    "type": "string",
+                    "title": "The country schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "BY"
+                    ]
+                },
+                "population": {
+                    "$id": "#/properties/city/properties/population",
+                    "type": "integer",
+                    "title": "The population schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1742124
+                    ]
+                },
+                "timezone": {
+                    "$id": "#/properties/city/properties/timezone",
+                    "type": "integer",
+                    "title": "The timezone schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        10800
+                    ]
+                },
+                "sunrise": {
+                    "$id": "#/properties/city/properties/sunrise",
+                    "type": "integer",
+                    "title": "The sunrise schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1630379795
+                    ]
+                },
+                "sunset": {
+                    "$id": "#/properties/city/properties/sunset",
+                    "type": "integer",
+                    "title": "The sunset schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1630429439
+                    ]
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}
