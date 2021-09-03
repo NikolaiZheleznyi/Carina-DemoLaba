@@ -15,6 +15,7 @@
  */
 package com.qaprosoft.carina.demo;
 
+import com.qaprosoft.carina.demo.mobile.gui.pages.android.TestP;
 import com.zebrunner.agent.core.annotation.TestLabel;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
@@ -36,6 +37,12 @@ import com.qaprosoft.carina.demo.utils.MobileContextUtils.View;
 
 public class MobileSampleTest implements IAbstractTest, IMobileUtils {
 
+   /* @Test()
+    public void TestTest() {
+        TestP test = new TestP(getDriver());
+        test.open();
+        pause(3);
+    }*/
     @Test()
     @MethodOwner(owner = "qpsdemo")
     @TestLabel(name = "feature", value = {"mobile", "regression"})
