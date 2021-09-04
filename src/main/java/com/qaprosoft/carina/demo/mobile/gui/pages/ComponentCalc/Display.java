@@ -8,11 +8,18 @@ import org.openqa.selenium.support.FindBy;
 public class Display extends AbstractUIObject {
 
     @FindBy(id = "com.google.android.calculator:id/result_final")
-    private ExtendedWebElement field;
+    private ExtendedWebElement fieldAnswer;
+
+    @FindBy(id = "com.google.android.calculator:id/result_preview")
+    private ExtendedWebElement noResult;
 
     public Display(WebDriver driver){super(driver);}
 
     public String getResultField(){
-        return field.getText();
+        return fieldAnswer.getText();
+    }
+
+    public String getNoResult(){
+        return noResult.getText();
     }
 }
