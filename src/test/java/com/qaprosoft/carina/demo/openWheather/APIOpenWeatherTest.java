@@ -41,7 +41,7 @@ public class APIOpenWeatherTest implements IAbstractTest {
         getForecastWeatherMethod.addParameter("exclude", "hourly,daily");
         getForecastWeatherMethod.callAPI();
         getForecastWeatherMethod.validateResponseAgainstSchema("api/users/forecast_get/rs.schema");
-        //getForecastWeatherMethod.validateResponse();
+        getForecastWeatherMethod.validateResponse();
     }
 
     @Test()

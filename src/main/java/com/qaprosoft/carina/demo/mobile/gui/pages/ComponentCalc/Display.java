@@ -1,4 +1,4 @@
-package com.qaprosoft.carina.demo.mobile.gui.pages.ComponentCalc;
+package com.qaprosoft.carina.demo.mobile.gui.pages.componentCalc;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractUIObject;

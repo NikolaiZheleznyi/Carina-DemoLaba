@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="GUI tests kufar">
-    <parameter name="suiteOwner" value="eldarian"/>
+    <parameter name="suiteOwner" value="nzheleznyi"/>
     <test name="kufar test">
         <classes>
             <class name="com.qaprosoft.carina.demo.kufar.KufarTest"/>

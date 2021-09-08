@@ -12,272 +12,272 @@
             "timezone": "Europe/Minsk",
             "timezone_offset": 10800,
             "current": {
-                "dt": 1630415415,
-                "sunrise": 1630379795,
-                "sunset": 1630429439,
-                "temp": 292.01,
-                "feels_like": 291.75,
-                "pressure": 1008,
-                "humidity": 69,
-                "dew_point": 286.21,
-                "uvi": 1.09,
-                "clouds": 68,
+                "dt": 1630656433,
+                "sunrise": 1630639313,
+                "sunset": 1630688204,
+                "temp": 286.01,
+                "feels_like": 284.92,
+                "pressure": 1010,
+                "humidity": 60,
+                "dew_point": 278.44,
+                "uvi": 2.66,
+                "clouds": 26,
                 "visibility": 10000,
-                "wind_speed": 3.63,
-                "wind_deg": 244,
-                "wind_gust": 4.67,
+                "wind_speed": 9.67,
+                "wind_deg": 260,
+                "wind_gust": 15.82,
                 "weather": [
                     {
-                        "id": 803,
+                        "id": 802,
                         "main": "Clouds",
-                        "description": "broken clouds",
-                        "icon": "04d"
+                        "description": "scattered clouds",
+                        "icon": "03d"
                     }
                 ]
             },
             "minutely": [
                 {
-                    "dt": 1630415460,
+                    "dt": 1630656480,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630415520,
+                    "dt": 1630656540,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630415580,
+                    "dt": 1630656600,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630415640,
+                    "dt": 1630656660,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630415700,
+                    "dt": 1630656720,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630415760,
+                    "dt": 1630656780,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630415820,
+                    "dt": 1630656840,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630415880,
+                    "dt": 1630656900,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630415940,
+                    "dt": 1630656960,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630416000,
+                    "dt": 1630657020,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630416060,
+                    "dt": 1630657080,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630416120,
+                    "dt": 1630657140,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630416180,
+                    "dt": 1630657200,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630416240,
+                    "dt": 1630657260,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630416300,
+                    "dt": 1630657320,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630416360,
+                    "dt": 1630657380,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630416420,
+                    "dt": 1630657440,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630416480,
+                    "dt": 1630657500,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630416540,
+                    "dt": 1630657560,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630416600,
+                    "dt": 1630657620,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630416660,
+                    "dt": 1630657680,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630416720,
+                    "dt": 1630657740,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630416780,
+                    "dt": 1630657800,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630416840,
+                    "dt": 1630657860,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630416900,
+                    "dt": 1630657920,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630416960,
+                    "dt": 1630657980,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630417020,
+                    "dt": 1630658040,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630417080,
+                    "dt": 1630658100,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630417140,
+                    "dt": 1630658160,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630417200,
+                    "dt": 1630658220,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630417260,
+                    "dt": 1630658280,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630417320,
+                    "dt": 1630658340,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630417380,
+                    "dt": 1630658400,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630417440,
+                    "dt": 1630658460,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630417500,
+                    "dt": 1630658520,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630417560,
+                    "dt": 1630658580,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630417620,
+                    "dt": 1630658640,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630417680,
+                    "dt": 1630658700,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630417740,
+                    "dt": 1630658760,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630417800,
+                    "dt": 1630658820,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630417860,
+                    "dt": 1630658880,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630417920,
+                    "dt": 1630658940,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630417980,
+                    "dt": 1630659000,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630418040,
+                    "dt": 1630659060,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630418100,
+                    "dt": 1630659120,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630418160,
+                    "dt": 1630659180,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630418220,
+                    "dt": 1630659240,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630418280,
+                    "dt": 1630659300,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630418340,
+                    "dt": 1630659360,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630418400,
+                    "dt": 1630659420,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630418460,
+                    "dt": 1630659480,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630418520,
+                    "dt": 1630659540,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630418580,
+                    "dt": 1630659600,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630418640,
+                    "dt": 1630659660,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630418700,
+                    "dt": 1630659720,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630418760,
+                    "dt": 1630659780,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630418820,
+                    "dt": 1630659840,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630418880,
+                    "dt": 1630659900,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630418940,
+                    "dt": 1630659960,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630419000,
+                    "dt": 1630660020,
                     "precipitation": 0
                 },
                 {
-                    "dt": 1630419060,
+                    "dt": 1630660080,
                     "precipitation": 0
                 }
             ]
@@ -340,26 +340,26 @@
             "default": {},
             "examples": [
                 {
-                    "dt": 1630415415,
-                    "sunrise": 1630379795,
-                    "sunset": 1630429439,
-                    "temp": 292.01,
-                    "feels_like": 291.75,
-                    "pressure": 1008,
-                    "humidity": 69,
-                    "dew_point": 286.21,
-                    "uvi": 1.09,
-                    "clouds": 68,
+                    "dt": 1630656433,
+                    "sunrise": 1630639313,
+                    "sunset": 1630688204,
+                    "temp": 286.01,
+                    "feels_like": 284.92,
+                    "pressure": 1010,
+                    "humidity": 60,
+                    "dew_point": 278.44,
+                    "uvi": 2.66,
+                    "clouds": 26,
                     "visibility": 10000,
-                    "wind_speed": 3.63,
-                    "wind_deg": 244,
-                    "wind_gust": 4.67,
+                    "wind_speed": 9.67,
+                    "wind_deg": 260,
+                    "wind_gust": 15.82,
                     "weather": [
                         {
-                            "id": 803,
+                            "id": 802,
                             "main": "Clouds",
-                            "description": "broken clouds",
-                            "icon": "04d"
+                            "description": "scattered clouds",
+                            "icon": "03d"
                         }
                     ]
                 }
@@ -389,7 +389,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        1630415415
+                        1630656433
                     ]
                 },
                 "sunrise": {
@@ -399,7 +399,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        1630379795
+                        1630639313
                     ]
                 },
                 "sunset": {
@@ -409,7 +409,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        1630429439
+                        1630688204
                     ]
                 },
                 "temp": {
@@ -419,7 +419,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0.0,
                     "examples": [
-                        292.01
+                        286.01
                     ]
                 },
                 "feels_like": {
@@ -429,7 +429,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0.0,
                     "examples": [
-                        291.75
+                        284.92
                     ]
                 },
                 "pressure": {
@@ -439,7 +439,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        1008
+                        1010
                     ]
                 },
                 "humidity": {
@@ -449,7 +449,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        69
+                        60
                     ]
                 },
                 "dew_point": {
@@ -459,7 +459,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0.0,
                     "examples": [
-                        286.21
+                        278.44
                     ]
                 },
                 "uvi": {
@@ -469,7 +469,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0.0,
                     "examples": [
-                        1.09
+                        2.66
                     ]
                 },
                 "clouds": {
@@ -479,7 +479,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        68
+                        26
                     ]
                 },
                 "visibility": {
@@ -499,7 +499,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0.0,
                     "examples": [
-                        3.63
+                        9.67
                     ]
                 },
                 "wind_deg": {
@@ -509,7 +509,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        244
+                        260
                     ]
                 },
                 "wind_gust": {
@@ -519,7 +519,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0.0,
                     "examples": [
-                        4.67
+                        15.82
                     ]
                 },
                 "weather": {
@@ -531,10 +531,10 @@
                     "examples": [
                         [
                             {
-                                "id": 803,
+                                "id": 802,
                                 "main": "Clouds",
-                                "description": "broken clouds",
-                                "icon": "04d"
+                                "description": "scattered clouds",
+                                "icon": "03d"
                             }
                         ]
                     ],
@@ -550,10 +550,10 @@
                                 "default": {},
                                 "examples": [
                                     {
-                                        "id": 803,
+                                        "id": 802,
                                         "main": "Clouds",
-                                        "description": "broken clouds",
-                                        "icon": "04d"
+                                        "description": "scattered clouds",
+                                        "icon": "03d"
                                     }
                                 ],
                                 "required": [
@@ -570,7 +570,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": 0,
                                         "examples": [
-                                            803
+                                            802
                                         ]
                                     },
                                     "main": {
@@ -590,7 +590,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": "",
                                         "examples": [
-                                            "broken clouds"
+                                            "scattered clouds"
                                         ]
                                     },
                                     "icon": {
@@ -600,7 +600,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": "",
                                         "examples": [
-                                            "04d"
+                                            "03d"
                                         ]
                                     }
                                 },
@@ -621,11 +621,11 @@
             "examples": [
                 [
                     {
-                        "dt": 1630415460,
+                        "dt": 1630656480,
                         "precipitation": 0
                     },
                     {
-                        "dt": 1630415520,
+                        "dt": 1630656540,
                         "precipitation": 0
                     }
                 ]
@@ -642,7 +642,7 @@
                         "default": {},
                         "examples": [
                             {
-                                "dt": 1630415460,
+                                "dt": 1630656480,
                                 "precipitation": 0
                             }
                         ],
@@ -658,7 +658,7 @@
                                 "description": "An explanation about the purpose of this instance.",
                                 "default": 0,
                                 "examples": [
-                                    1630415460
+                                    1630656480
                                 ]
                             },
                             "precipitation": {

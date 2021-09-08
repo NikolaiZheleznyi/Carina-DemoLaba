@@ -1,11 +1,9 @@
 package com.qaprosoft.carina.demo;
 
 import com.qaprosoft.carina.core.foundation.IAbstractTest;
-import com.qaprosoft.carina.demo.mobile.gui.pages.ComponentCalc.Display;
-import com.qaprosoft.carina.demo.mobile.gui.pages.ComponentCalc.Number;
-import com.qaprosoft.carina.demo.mobile.gui.pages.ComponentCalc.Simbol;
-import com.qaprosoft.carina.demo.mobile.gui.pages.common.LoginPageBase;
-import com.qaprosoft.carina.demo.mobile.gui.pages.common.WelcomePageBase;
+import com.qaprosoft.carina.demo.mobile.gui.pages.componentCalc.Display;
+import com.qaprosoft.carina.demo.mobile.gui.pages.componentCalc.Number;
+import com.qaprosoft.carina.demo.mobile.gui.pages.componentCalc.Simbol;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
