@@ -22,11 +22,20 @@ public class KufarHomePage extends AbstractPage {
     @FindBy(xpath = "//div[@id='portal']//descendant::img[@alt='close']")
     private ExtendedWebElement portalCloseButton;
 
+    @FindBy(xpath = "//div[@id='__next']//button[@id='cancel']")
+    private ExtendedWebElement portalCloseButton2;
+
     @FindBy(xpath = "//div[@data-name='user_profile_pic']")
     private ExtendedWebElement userMenu;
 
     @FindBy(xpath = "//input[@placeholder='Товар, услуга']")
     private ExtendedWebElement searchField;
+
+    @FindBy(xpath = "//button[@class='kf-LRuy-6ff1f']//span[text()='Уся Беларусь']")
+    private ExtendedWebElement allBelarusBtn;
+
+    @FindBy(xpath = "//div[@class='kf-uLg-4888a']//h1[text()='подушка купить в Беларуси']")
+    private ExtendedWebElement fieldResultSearch;
 
     @FindBy(xpath = "//div[@data-name='notification_icon']")
     private ExtendedWebElement notificationsButton;
@@ -43,7 +52,7 @@ public class KufarHomePage extends AbstractPage {
     @FindBy(xpath = "//span[text()='Русский']")
     private ExtendedWebElement changeLanguageRussia;
 
-    @FindBy(xpath = "//div[@data-name='listings-pagination']//a[5]")
+    @FindBy(xpath = "//div[@data-cy]//a[last()]")
     private ExtendedWebElement nextPage;
 
     @FindBy(xpath = "//div[@data-name='listings-pagination']//a[1]")
@@ -62,6 +71,9 @@ public class KufarHomePage extends AbstractPage {
     public void closePortal() {
         portalCloseButton.click();
     }
+    public void closePortal2() {
+        portalCloseButton2.click();
+    }
 
     public void loginBlockButten() {
         loginBlockButten.click();
@@ -76,6 +88,9 @@ public class KufarHomePage extends AbstractPage {
         searchField.type(sf);
         searchField.sendKeys(Keys.ENTER);
     }
+    public String getTextAllBelarusDtn(){
+        return allBelarusBtn.getText();
+    }
 
     public void clickNotificationsButton() {
         notificationsButton.click();
@@ -88,9 +103,13 @@ public class KufarHomePage extends AbstractPage {
         chooseProduct.click();
     }
 
+    public String getTextFieldResultSearch() {
+        return fieldResultSearch.getText();
+    }
+
     public void clickChangeLanguage() {
         changeLanguageBelarus.click();
-        changeLanguageRussia.click();
+        //changeLanguageRussia.click();
     }
     public void clickNextPage() {
         nextPage.scrollTo();
@@ -100,6 +119,7 @@ public class KufarHomePage extends AbstractPage {
     }
     public void clickBackPage() {
         backPage.scrollTo();
+        nextPage.click();
         backPage.click();
         pause(2);
     }

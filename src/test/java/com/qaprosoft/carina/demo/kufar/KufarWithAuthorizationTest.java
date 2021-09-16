@@ -32,6 +32,7 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
         kufarHomePage.open();
         //pause(2);
         kufarHomePage.closePortal();
+        kufarHomePage.closePortal2();
         //LOGGER.info("Start test-methods");
     }
    @BeforeMethod
@@ -52,6 +53,7 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
         userMenu.clickMyAds();
         userMenu.closeInfoField();
         pause(1);
+        Assert.assertEquals(getDriver().getTitle(),"Мои объявления");
 
     }
     @Test
@@ -61,12 +63,15 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
 
         UserMenu userMenu = new UserMenu(getDriver());
         userMenu.clickMyMesseges();
+        Assert.assertEquals(getDriver().getTitle(),"Kufar | Продавайте и покупайте любые товары");
     }
 
     @Test
     @MethodOwner(owner = "nzheleznyi")
     public void testNotifications() {
         kufarHomePage.clickNotificationsButton();
+        UserMenu userMenu = new UserMenu(getDriver());
+        Assert.assertEquals(userMenu.getTextAds(),"Отметить все как прочитанные");
 
     }
 
@@ -77,6 +82,7 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
 
         ContactSeller contactSeller = new ContactSeller(getDriver());
         contactSeller.clickWrite();
+        Assert.assertEquals(contactSeller.getTextSendMessageBtn(),"Отправить");
     }
 
     @Test
@@ -88,9 +94,10 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
 
            ContactSeller contactSeller = new ContactSeller(getDriver());
            contactSeller.clickCall();
+           Assert.assertEquals(contactSeller.getTextAfterCallBtn(),"Отправить");
        } catch (NoSuchElementException e) {LOGGER.info("Button call not found");}
     }
-    @AfterMethod
+   /* @AfterMethod
     public void closePage(){
         kufarHomePage.openUserMenu();
         LogOut logOut = new LogOut(getDriver());
@@ -101,6 +108,6 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
     @AfterSuite
     public void afterSuite() {
         LOGGER.info("After test with Authorization");
-    }
+    }*/
 
 }

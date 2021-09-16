@@ -12,6 +12,9 @@ public class UserMenu extends AbstractPage {
     @FindBy(xpath = "//span[text()='Мои объявления']")
     private ExtendedWebElement myAds;
 
+    @FindBy(xpath = "//span[text()='Отметить все как прочитанные']")
+    private ExtendedWebElement getMyAds;
+
     @FindBy(xpath = "//span[text()='Мои сообщения']")
     private ExtendedWebElement myMesseges;
 
@@ -28,5 +31,9 @@ public class UserMenu extends AbstractPage {
 
     public void closeInfoField(){
         closeInfoField.click();
+    }
+
+    public String getTextAds(){
+        return getMyAds.getText();
     }
 }
