@@ -5,6 +5,7 @@
         <classes>
             <class name="com.qaprosoft.carina.demo.kufar.KufarTest"/>
             <class name="com.qaprosoft.carina.demo.kufar.KufarWithAuthorizationTest" />
+            <class name="com.qaprosoft.carina.demo.kufar.AutoKufarTest" />
         </classes>
     </test>
 </suite>
