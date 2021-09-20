@@ -28,6 +28,8 @@ public class AutoKufarTest implements IAbstractTest {
         kufarHomePage.open();
         kufarHomePage.closePortal();
         kufarHomePage.closePortal2();
+        AutoKufarPage openAutoBtn = new AutoKufarPage(getDriver());
+        openAutoBtn.clickAutoBtn();
     }
 /*    @BeforeMethod
     public void numberTest(){
@@ -41,7 +43,7 @@ public class AutoKufarTest implements IAbstractTest {
     @MethodOwner(owner = "nzheleznyi")
     public void testCheckItemsNameForCarMercedesEClass() {
         AutoKufarPage mercedesBenzEClass = new AutoKufarPage(getDriver());
-        mercedesBenzEClass.clickAutoBtn();
+        //mercedesBenzEClass.clickAutoBtn();
         mercedesBenzEClass.clickMercedesBtn();
         mercedesBenzEClass.clickEClassBtn();
         pause(5);

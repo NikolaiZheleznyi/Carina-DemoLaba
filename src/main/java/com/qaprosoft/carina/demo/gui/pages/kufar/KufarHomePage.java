@@ -52,10 +52,10 @@ public class KufarHomePage extends AbstractPage {
     @FindBy(xpath = "//span[text()='Русский']")
     private ExtendedWebElement changeLanguageRussia;
 
-    @FindBy(xpath = "//div[@data-cy]//a[last()]")
+    @FindBy(xpath = "//div[@data-cy]//a[last()][not(@target)]")
     private ExtendedWebElement nextPage;
 
-    @FindBy(xpath = "//div[@data-name='listings-pagination']//a[1]")
+    @FindBy(xpath = "//div[@data-cy]//a[1][not(@target)]")
     private ExtendedWebElement backPage;
 
     @FindBy(xpath = "./*")
