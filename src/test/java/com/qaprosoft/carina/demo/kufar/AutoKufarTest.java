@@ -8,10 +8,7 @@ import com.qaprosoft.carina.demo.gui.pages.kufar.AutoKufarPage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.lang.invoke.MethodHandles;
 import java.util.List;
@@ -25,21 +22,19 @@ public class AutoKufarTest implements IAbstractTest {
         LOGGER.info("Before test with Authorization");
     }
 
-/*
-    @BeforeClass
+    @BeforeTest
     public void openHomePage() {
         kufarHomePage.open();
         kufarHomePage.closePortal();
         kufarHomePage.closePortal2();
     }
-*/
-    @BeforeMethod
+/*    @BeforeMethod
     public void numberTest(){
         kufarHomePage.open();
         kufarHomePage.closePortal();
         kufarHomePage.closePortal2();
         LOGGER.info("Test starting");
-    }
+    }*/
 
     @Test
     @MethodOwner(owner = "nzheleznyi")
@@ -62,7 +57,7 @@ public class AutoKufarTest implements IAbstractTest {
     @MethodOwner(owner = "nzheleznyi")
     public void testCheckItemsNameForSparesMercedes(){
         AutoKufarPage sparesMercedes = new AutoKufarPage(getDriver());
-        sparesMercedes.clickAutoBtn();
+        //sparesMercedes.clickAutoBtn();
         sparesMercedes.clickSparesTopMenu();
         sparesMercedes.clickSparesForMercedes();
         FileReadSparesKufar fileSpares = new FileReadSparesKufar();
