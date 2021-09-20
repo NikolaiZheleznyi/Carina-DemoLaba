@@ -5,6 +5,7 @@ import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
 import com.qaprosoft.carina.demo.gui.components.kufar.FileReadSparesKufar;
 import com.qaprosoft.carina.demo.gui.pages.kufar.KufarHomePage;
 import com.qaprosoft.carina.demo.gui.pages.kufar.AutoKufarPage;
+import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -14,7 +15,7 @@ import org.testng.asserts.SoftAssert;
 import java.lang.invoke.MethodHandles;
 import java.util.List;
 
-public class AutoKufarTest implements IAbstractTest {
+public class TestAutoKufar implements IAbstractTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
     KufarHomePage kufarHomePage = new KufarHomePage(getDriver());
 
@@ -23,11 +24,11 @@ public class AutoKufarTest implements IAbstractTest {
         LOGGER.info("Before test with Authorization");
     }
 
-    @BeforeTest
+    @BeforeClass
     public void openHomePage() {
         kufarHomePage.open();
-        kufarHomePage.closePortal();
-        kufarHomePage.closePortal2();
+       /* kufarHomePage.closePortal();
+        kufarHomePage.closePortal2();*/
         AutoKufarPage openAutoBtn = new AutoKufarPage(getDriver());
         openAutoBtn.clickAutoBtn();
     }
@@ -81,12 +82,5 @@ public class AutoKufarTest implements IAbstractTest {
             }
         kufarHomePage.clickNextPage();
         }
-
-
-
-
-
-
     }
-
 }

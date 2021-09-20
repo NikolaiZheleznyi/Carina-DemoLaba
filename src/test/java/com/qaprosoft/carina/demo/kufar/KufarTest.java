@@ -12,6 +12,7 @@ import com.qaprosoft.carina.demo.gui.components.kufar.UserMenu;
 import com.qaprosoft.carina.demo.gui.pages.kufar.KufarHomePage;
 
 
+import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -40,39 +41,14 @@ public class KufarTest implements IAbstractTest {
     public void numberTest(){
         LOGGER.info("Test starting");
     }
-    @Test
-    @MethodOwner(owner = "nzheleznyi")
-    public void testSearchField() {
-
-        final String inputSF = "подушка";
-        kufarHomePage.openSearchField(inputSF);
-        Assert.assertEquals(kufarHomePage.getTextFieldResultSearch(),"подушка купить в Беларуси");
-    }
-
-    @Test
-    @MethodOwner(owner = "nzheleznyi")
-    public void testChooseProductCategory() {
-        ChooseProductCategory chooseProductCategory = new ChooseProductCategory(getDriver());
-        chooseProductCategory.clickCategoryButton();
-        chooseProductCategory.clickAnimalsButton();
-        chooseProductCategory.clickPetsButtin();
-        chooseProductCategory.clickShowResults();
-        Assert.assertEquals(getDriver().getTitle(),"Домашних животных купить в Беларуси");
-        CategoryItem categoryItem = new CategoryItem(getDriver());
-        for(int i = 1; i<3; i++){
-            List<String> nameAnimal = categoryItem.getTextFieldCategoryItems();
-            for(String animalName : nameAnimal){
-                Assert.assertTrue(animalName.contains("Домашние питомцы"));}
-            kufarHomePage.clickNextPage();
-        }
-    }
 
     @Test
     @MethodOwner(owner = "nzheleznyi")
     public void testChangeLanguage() {
 
-        kufarHomePage.clickChangeLanguage();
+        kufarHomePage.clickChangeLanguageBLR();
         Assert.assertEquals(kufarHomePage.getTextAllBelarusDtn(),"Уся Беларусь");
+        kufarHomePage.clickChangeLanguageRUS();
     }
 
     @Test
@@ -80,6 +56,7 @@ public class KufarTest implements IAbstractTest {
     public void testBackPage() {
 
         kufarHomePage.clickBackPage();
+        pause(2);
         Assert.assertEquals(getDriver().getCurrentUrl(),"https://www.kufar.by/l?cursor=eyJ0IjoiYWJzIiwiZiI6dHJ1ZSwicCI6MX0=");
     }
 
@@ -91,7 +68,34 @@ public class KufarTest implements IAbstractTest {
         Assert.assertEquals(getDriver().getCurrentUrl(),"https://www.kufar.by/l?cursor=eyJ0IjoiYWJzIiwiZiI6dHJ1ZSwicCI6Mn0=");
     }
 
-    @AfterMethod
+
+    @Test
+    @MethodOwner(owner = "nzheleznyi")
+    public void testChooseProductCategory() {
+        ChooseProductCategory chooseProductCategory = new ChooseProductCategory(getDriver());
+        chooseProductCategory.clickCategoryButton();
+        chooseProductCategory.clickAnimalsButton();
+        chooseProductCategory.clickPetsButtin();
+        chooseProductCategory.clickShowResults();
+        CategoryItem categoryItem = new CategoryItem(getDriver());
+        for(int i = 1; i<3; i++){
+            List<String> nameAnimal = categoryItem.getTextFieldCategoryItems();
+            for(String animalName : nameAnimal){
+                Assert.assertTrue(animalName.contains("Домашние питомцы"));}
+            kufarHomePage.clickNextPage();
+        }
+    }
+
+   /* @Test
+    @MethodOwner(owner = "nzheleznyi")
+    public void testSearchField() {
+
+        final String inputSF = "подушка";
+        kufarHomePage.openSearchField(inputSF);
+
+    }*/
+
+    @AfterClass
     public void testPassed() {
         LOGGER.info("Test passed");
     }

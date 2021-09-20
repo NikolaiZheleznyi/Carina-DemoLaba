@@ -31,10 +31,10 @@ public class KufarHomePage extends AbstractPage {
     @FindBy(xpath = "//input[@placeholder='Товар, услуга']")
     private ExtendedWebElement searchField;
 
-    @FindBy(xpath = "//button[@class='kf-LRuy-6ff1f']//span[text()='Уся Беларусь']")
+    @FindBy(xpath = "//button[@type='button']//span[text()='Уся Беларусь']")
     private ExtendedWebElement allBelarusBtn;
 
-    @FindBy(xpath = "//div[@class='kf-uLg-4888a']//h1[text()='подушка купить в Беларуси']")
+    @FindBy(xpath = "//a[@target='_blank']//h3[contains(text(), 'подушка')]")
     private ExtendedWebElement fieldResultSearch;
 
     @FindBy(xpath = "//div[@data-name='notification_icon']")
@@ -42,9 +42,6 @@ public class KufarHomePage extends AbstractPage {
 
     @FindBy(xpath = "//div[@data-name='megamenu']//button")
     private ExtendedWebElement categoryButton;
-
-    @FindBy(xpath = "//div[@class='kf-OZzP-810dc']//div[1]//a")
-    private ExtendedWebElement chooseProduct;
 
     @FindBy(xpath = "//span[text()='Беларуская']")
     private ExtendedWebElement changeLanguageBelarus;
@@ -67,6 +64,8 @@ public class KufarHomePage extends AbstractPage {
     public KufarHomePage(WebDriver driver) {
         super(driver);
     }
+
+    public void refresh(){driver.get("www.kufar.by");}
 
     public void closePortal() {
         portalCloseButton.click();
@@ -96,20 +95,18 @@ public class KufarHomePage extends AbstractPage {
         notificationsButton.click();
     }
 
-    public void clickCategoryButton() {
-        categoryButton.click();
-    }
-    public void clickChooseProduct() {
-        chooseProduct.click();
-    }
 
     public String getTextFieldResultSearch() {
         return fieldResultSearch.getText();
     }
 
-    public void clickChangeLanguage() {
+    public void clickChangeLanguageBLR() {
         changeLanguageBelarus.click();
-        //changeLanguageRussia.click();
+
+    }
+
+    public void clickChangeLanguageRUS() {
+        changeLanguageRussia.click();
     }
     public void clickNextPage() {
         nextPage.scrollTo();
@@ -119,7 +116,6 @@ public class KufarHomePage extends AbstractPage {
     }
     public void clickBackPage() {
         backPage.scrollTo();
-        nextPage.click();
         backPage.click();
         pause(2);
     }

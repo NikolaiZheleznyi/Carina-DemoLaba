@@ -3,9 +3,21 @@
     <parameter name="suiteOwner" value="nzheleznyi"/>
     <test name="kufar test">
         <classes>
-            <!--<class name="com.qaprosoft.carina.demo.kufar.KufarTest"/>-->
+            <class name="com.qaprosoft.carina.demo.kufar.KufarTest">
+                <methods>
+                   <!-- <include name="testSearchField"/>-->
+                    <include name="testNextPage"/>
+                    <include name="testBackPage"/>
+                    <include name="testChooseProductCategory"/>
+                    <include name="testChangeLanguage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="auto kufar test">
+        <classes>
+            <class name="com.qaprosoft.carina.demo.kufar.TestAutoKufar" />
             <!--<class name="com.qaprosoft.carina.demo.kufar.KufarWithAuthorizationTest" />-->
-            <class name="com.qaprosoft.carina.demo.kufar.AutoKufarTest" />
         </classes>
     </test>
 </suite>
