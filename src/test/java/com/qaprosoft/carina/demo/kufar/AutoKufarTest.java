@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
 
 import java.lang.invoke.MethodHandles;
 import java.util.List;
@@ -45,13 +46,15 @@ public class AutoKufarTest implements IAbstractTest {
         mercedesBenzEClass.clickEClassBtn();
         pause(5);
         Assert.assertEquals(getDriver().getCurrentUrl(),"https://auto.kufar.by/l/cars/mercedes-benz-e-klass");
+        SoftAssert softAssert = new SoftAssert();
         for(int i = 0; i<3; i++){
             List<String> names = mercedesBenzEClass.getTextFieldItemsName();
             for(String carName : names){
-                Assert.assertTrue(carName.contains("Mercedes-Benz E-Класс"));
+                softAssert.assertTrue(carName.contains("Mercedes-Benz E-Класс"));
             }
             kufarHomePage.clickNextPage();
         }
+        softAssert.assertAll();
 
     }
     @Test
