@@ -43,8 +43,9 @@ public class AutoKufarTest implements IAbstractTest {
         mercedesBenzEClass.clickAutoBtn();
         mercedesBenzEClass.clickMercedesBtn();
         mercedesBenzEClass.clickEClassBtn();
+        pause(5);
         Assert.assertEquals(getDriver().getCurrentUrl(),"https://auto.kufar.by/l/cars/mercedes-benz-e-klass");
-        for(int i = 1; i<3; i++){
+        for(int i = 0; i<3; i++){
             List<String> names = mercedesBenzEClass.getTextFieldItemsName();
             for(String carName : names){
                 Assert.assertTrue(carName.contains("Mercedes-Benz E-Класс"));
