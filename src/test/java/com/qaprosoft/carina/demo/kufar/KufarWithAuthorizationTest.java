@@ -31,8 +31,10 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
     public void openHomePage() {
         kufarHomePage.open();
         //pause(2);
-        kufarHomePage.closePortal();
-        kufarHomePage.closePortal2();
+        try {
+            kufarHomePage.closePortal();
+            kufarHomePage.closePortal2();
+        }catch(NoSuchElementException e){}
         Authorization authorization = new Authorization(getDriver());
         authorization.testAuthorization();
         Assert.assertTrue(kufarHomePage.getUserImageBtn().isElementPresent(),"Н");}

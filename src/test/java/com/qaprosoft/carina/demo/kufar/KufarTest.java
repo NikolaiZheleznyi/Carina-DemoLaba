@@ -65,6 +65,7 @@ public class KufarTest implements IAbstractTest {
     public void testNextPage() {
 
         kufarHomePage.clickNextPage();
+        pause(2);
         Assert.assertEquals(getDriver().getCurrentUrl(),"https://www.kufar.by/l?cursor=eyJ0IjoiYWJzIiwiZiI6dHJ1ZSwicCI6Mn0=");
     }
 

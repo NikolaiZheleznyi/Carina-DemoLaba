@@ -5,6 +5,7 @@ import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
 import com.qaprosoft.carina.demo.gui.components.kufar.FileReadSparesKufar;
 import com.qaprosoft.carina.demo.gui.pages.kufar.KufarHomePage;
 import com.qaprosoft.carina.demo.gui.pages.kufar.AutoKufarPage;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +15,7 @@ import org.testng.asserts.SoftAssert;
 
 import java.lang.invoke.MethodHandles;
 import java.util.List;
+
 
 public class TestAutoKufar implements IAbstractTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
@@ -27,18 +29,12 @@ public class TestAutoKufar implements IAbstractTest {
     @BeforeClass
     public void openHomePage() {
         kufarHomePage.open();
-       /* kufarHomePage.closePortal();
-        kufarHomePage.closePortal2();*/
+        try{
+            kufarHomePage.closePortal();
+            kufarHomePage.closePortal2();
+        }catch (NoSuchElementException e){}
         AutoKufarPage openAutoBtn = new AutoKufarPage(getDriver());
-        openAutoBtn.clickAutoBtn();
-    }
-/*    @BeforeMethod
-    public void numberTest(){
-        kufarHomePage.open();
-        kufarHomePage.closePortal();
-        kufarHomePage.closePortal2();
-        LOGGER.info("Test starting");
-    }*/
+        openAutoBtn.clickAutoBtn();}
 
     @Test
     @MethodOwner(owner = "nzheleznyi")
