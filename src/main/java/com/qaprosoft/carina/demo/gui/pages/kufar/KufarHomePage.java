@@ -109,13 +109,13 @@ public class KufarHomePage extends AbstractPage {
         changeLanguageRussia.click();
     }
     public void clickNextPage() {
-        nextPage.scrollTo();
+
         nextPage.click();
         pause(2);
 
     }
     public void clickBackPage() {
-        backPage.scrollTo();
+
         backPage.click();
         pause(2);
     }
