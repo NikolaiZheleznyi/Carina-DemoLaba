@@ -33,17 +33,17 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
         //pause(2);
         kufarHomePage.closePortal();
         kufarHomePage.closePortal2();
-        //LOGGER.info("Start test-methods");
+        Authorization authorization = new Authorization(getDriver());
+        authorization.testAuthorization();
+        Assert.assertTrue(kufarHomePage.getUserImageBtn().isElementPresent(),"Н");}
+    @BeforeClass
+    public void closeFlyPage(){
+        try {
+            kufarHomePage.closePortal2();
+        }catch (NoSuchElementException e){}
     }
-   @BeforeMethod
-    public void testAuthorization() {
 
-       Authorization authorization = new Authorization(getDriver());
-       authorization.testAuthorization();
-       Assert.assertTrue(kufarHomePage.getUserImageBtn().isElementPresent(),"Н");
-    }
-
-    @Test
+    @Test(priority = 2)
     @MethodOwner(owner = "nzheleznyi")
     public void testMyAds() {
 
@@ -56,7 +56,7 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
         Assert.assertEquals(getDriver().getTitle(),"Мои объявления");
 
     }
-    @Test
+    @Test(priority = 3)
     @MethodOwner(owner = "nzheleznyi")
     public void testMyMesseges() {
         kufarHomePage.openUserMenu();
@@ -66,7 +66,7 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
         Assert.assertEquals(getDriver().getTitle(),"Kufar | Продавайте и покупайте любые товары");
     }
 
-    @Test
+    @Test(priority = 1)
     @MethodOwner(owner = "nzheleznyi")
     public void testNotifications() {
         kufarHomePage.clickNotificationsButton();
@@ -75,7 +75,7 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
 
     }
 
-    @Test
+    @Test(priority = 4)
     @MethodOwner(owner = "nzheleznyi")
     public void testWriteToSeller() {
         kufarHomePage.openProductPage();
@@ -83,9 +83,11 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
         ContactSeller contactSeller = new ContactSeller(getDriver());
         contactSeller.clickWrite();
         Assert.assertEquals(contactSeller.getTextSendMessageBtn(),"Отправить");
+        contactSeller.clickCloseBtnMssg();
+        contactSeller.clickGoHomePage();
     }
 
-    @Test
+    @Test(priority = 5)
     @MethodOwner(owner = "nzheleznyi")
     public void testCallToSeller() {
        try {
@@ -94,20 +96,20 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
 
            ContactSeller contactSeller = new ContactSeller(getDriver());
            contactSeller.clickCall();
-           Assert.assertEquals(contactSeller.getTextAfterCallBtn(),"Отправить");
+           Assert.assertEquals(contactSeller.getTextAfterCallBtn(),"Пожалуйста, скажите продавцу, что звоните по объявлению с Куфара");
+           contactSeller.clickCloseBtnCall();
+           contactSeller.clickGoHomePage();
        } catch (NoSuchElementException e) {LOGGER.info("Button call not found");}
+
     }
-   /* @AfterMethod
+    /*@AfterMethod
     public void closePage(){
-        kufarHomePage.openUserMenu();
-        LogOut logOut = new LogOut(getDriver());
-        logOut.clickExitAccount();
-        pause(2);
-       //LOGGER.info("Something close page");
-    }
+        ContactSeller contactSeller = new ContactSeller(getDriver());
+        contactSeller.clickGoHomePage();
+    }*/
     @AfterSuite
     public void afterSuite() {
         LOGGER.info("After test with Authorization");
-    }*/
+    }
 
 }

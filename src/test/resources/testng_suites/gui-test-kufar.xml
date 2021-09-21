@@ -14,6 +14,20 @@
             </class>
         </classes>
     </test>
+    <test name="kufar test with authorization">
+        <classes>
+            <class name="com.qaprosoft.carina.demo.kufar.KufarWithAuthorizationTest">
+                <methods>
+                    <include name="testNotifications"/>
+                    <include name="testWriteToSeller"/>
+                    <include name="testCallToSeller"/>
+                    <include name="testMyMesseges"/>
+                    <include name="testMyAds"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
     <test name="auto kufar test">
         <classes>
             <class name="com.qaprosoft.carina.demo.kufar.TestAutoKufar" />

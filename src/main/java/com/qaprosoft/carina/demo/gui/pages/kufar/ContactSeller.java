@@ -10,23 +10,34 @@ public class ContactSeller extends AbstractPage {
         super(driver);
     }
 
-    @FindBy(xpath = "//div[@class='kf-eBrM-b0f37']//button[text()='Отправить']")
+    @FindBy(xpath = "//button[text()='Отправить']")
     private ExtendedWebElement sendMessageBtn;
     @FindBy(xpath = "//div[@id='sidebar-buttons']//button[text()='Написать']")
     private ExtendedWebElement writeToSeller;
+        @FindBy(xpath = "//div[@id='__next']//img[@alt='close']")
+    private ExtendedWebElement closeFieldMssgBtn;
 
     @FindBy(xpath = "//div[@id='sidebar-buttons']//button[text()='Позвонить']")
     private ExtendedWebElement callToSeller;
-
-    @FindBy(xpath = "//div[@class='kf-emrm-fd69a']//text()")
+    @FindBy(xpath = "//div[@data-name='phone-number-modal']//div[last()]")
     private ExtendedWebElement fieldSaySalesman;
+    @FindBy(xpath = "//div[@id='adview_content']//img[@alt='close']")
+    private ExtendedWebElement closeFieldCallBtn;
+
+    @FindBy(xpath = "//div[@id='header']//a//img[@width='130']")
+    private ExtendedWebElement goPageHome;
 
     public void clickWrite(){
         writeToSeller.click();
     }
+    public void clickCloseBtnMssg(){
+        closeFieldMssgBtn.click();
+    }
 
     public void clickCall(){
         callToSeller.click();
+    }
+    public void clickCloseBtnCall(){closeFieldCallBtn.click();
     }
 
     public String getTextSendMessageBtn(){
@@ -34,5 +45,9 @@ public class ContactSeller extends AbstractPage {
     }
     public String getTextAfterCallBtn(){
         return fieldSaySalesman.getText();
+    }
+
+    public void clickGoHomePage(){
+        goPageHome.click();
     }
 }
