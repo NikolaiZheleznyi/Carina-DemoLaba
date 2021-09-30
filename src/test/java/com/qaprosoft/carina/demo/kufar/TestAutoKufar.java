@@ -5,8 +5,8 @@ import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
 import com.qaprosoft.carina.demo.gui.components.kufar.FileReadSparesKufar;
 import com.qaprosoft.carina.demo.gui.pages.kufar.KufarHomePage;
 import com.qaprosoft.carina.demo.gui.pages.kufar.AutoKufarPage;
+import com.qaprosoft.carina.demo.gui.utils.enums.ModelCar;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -29,54 +29,36 @@ public class TestAutoKufar implements IAbstractTest {
     @BeforeClass
     public void openHomePage() {
         kufarHomePage.open();
-        try{
-            kufarHomePage.closePortal();
-            kufarHomePage.closePortal2();
-        }catch (NoSuchElementException e){}
+        kufarHomePage.closePortal();
+        kufarHomePage.closePortal2();
+
         AutoKufarPage openAutoBtn = new AutoKufarPage(getDriver());
         openAutoBtn.clickAutoBtn();}
 
     @Test
     @MethodOwner(owner = "nzheleznyi")
     public void testCheckItemsNameForCarMercedesEClass() {
-        AutoKufarPage mercedesBenzEClass = new AutoKufarPage(getDriver());
+        AutoKufarPage autoKufarPage = new AutoKufarPage(getDriver());
         //mercedesBenzEClass.clickAutoBtn();
-        mercedesBenzEClass.clickMercedesBtn();
-        mercedesBenzEClass.clickEClassBtn();
+        autoKufarPage.clickMercedesBtn(ModelCar.MERCEDES.getModel());
+        autoKufarPage.clickEClassBtn();
         pause(5);
         Assert.assertEquals(getDriver().getCurrentUrl(),"https://auto.kufar.by/l/cars/mercedes-benz-e-klass");
-        SoftAssert softAssert = new SoftAssert();
-        for(int i = 0; i<3; i++){
-            List<String> names = mercedesBenzEClass.getTextFieldItemsName();
-            for(String carName : names){
-                softAssert.assertTrue(carName.contains("Mercedes-Benz E-Класс"));
-            }
-            kufarHomePage.clickNextPage();
-        }
-        softAssert.assertAll();
+        autoKufarPage.checkAssertModelMercedesFor3Page();
 
     }
     @Test
     @MethodOwner(owner = "nzheleznyi")
     public void testCheckItemsNameForSparesMercedes(){
-        AutoKufarPage sparesMercedes = new AutoKufarPage(getDriver());
+        AutoKufarPage autoKufarPage = new AutoKufarPage(getDriver());
         //sparesMercedes.clickAutoBtn();
-        sparesMercedes.clickSparesTopMenu();
-        sparesMercedes.clickSparesForMercedes();
-        FileReadSparesKufar fileSpares = new FileReadSparesKufar();
-        for(int i = 0; i<3; i++){
-            List<String> spareNames = sparesMercedes.getListFieldSparesItems();
-            for (String name : spareNames){
-                List<String> spareLst = fileSpares.getLineList();
-                boolean hasSpare = false;
-                for(String lstSpare : spareLst){
-                    if (name.contains(lstSpare)){
-                        hasSpare = true;
-                    }
-                }
-                Assert.assertTrue(hasSpare);
-            }
-        kufarHomePage.clickNextPage();
-        }
+        autoKufarPage.clickSparesTopMenu();
+        autoKufarPage.clickSparesForMercedes(ModelCar.MERCEDES.getModel());
+        autoKufarPage.checkAssertSparesFor3Page();
+
+    }
+    @AfterClass
+    public void openHomePageAgain(){
+        kufarHomePage.open();
     }
 }

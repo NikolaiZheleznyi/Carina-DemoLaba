@@ -9,31 +9,26 @@ public class UserMenu extends AbstractPage {
     public UserMenu(WebDriver driver) {
         super(driver);
     }
-    @FindBy(xpath = "//span[text()='Мои объявления']")
-    private ExtendedWebElement myAds;
 
-    @FindBy(xpath = "//span[text()='Отметить все как прочитанные']")
-    private ExtendedWebElement getMyAds;
-
-    @FindBy(xpath = "//span[text()='Мои сообщения']")
-    private ExtendedWebElement myMesseges;
+    @FindBy(xpath = "//span[text()='%s']")
+    private ExtendedWebElement profileMenu;
 
     @FindBy(xpath = "//div[contains(@class, 'popup_type_active')]//span[contains(@class, 'popup_type_info_close')]")
     private ExtendedWebElement closeInfoField;
 
-    public void clickMyAds(){
-        myAds.click();
+    public void clickMyAds(String messAds){
+        profileMenu.format(messAds).click();
     }
 
-    public void clickMyMesseges(){
-        myMesseges.click();
+    public void clickMyMesseges(String messAds){
+        profileMenu.format(messAds).click();
     }
 
     public void closeInfoField(){
         closeInfoField.click();
     }
 
-    public String getTextAds(){
-        return getMyAds.getText();
+    public String getTextAds(String messAds){
+        return profileMenu.format(messAds).getText();
     }
 }

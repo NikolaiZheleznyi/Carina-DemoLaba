@@ -3,7 +3,6 @@ package com.qaprosoft.carina.demo.gui.pages.kufar;
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
 
-import com.qaprosoft.carina.demo.gui.components.kufar.ChooseProductCategory;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
@@ -11,7 +10,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.lang.invoke.MethodHandles;
-import java.util.List;
 
 public class KufarHomePage extends AbstractPage {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
@@ -34,7 +32,7 @@ public class KufarHomePage extends AbstractPage {
     @FindBy(xpath = "//button[@type='button']//span[text()='Уся Беларусь']")
     private ExtendedWebElement allBelarusBtn;
 
-    @FindBy(xpath = "//a[@target='_blank']//h3[contains(text(), 'подушка')]")
+    @FindBy(xpath = "//a[@target='_blank']//h3[contains(text(), '%s')]")
     private ExtendedWebElement fieldResultSearch;
 
     @FindBy(xpath = "//div[@data-name='notification_icon']")
@@ -43,11 +41,8 @@ public class KufarHomePage extends AbstractPage {
     @FindBy(xpath = "//div[@data-name='megamenu']//button")
     private ExtendedWebElement categoryButton;
 
-    @FindBy(xpath = "//span[text()='Беларуская']")
-    private ExtendedWebElement changeLanguageBelarus;
-
-    @FindBy(xpath = "//span[text()='Русский']")
-    private ExtendedWebElement changeLanguageRussia;
+    @FindBy(xpath = "//span[text()='%s']")
+    private ExtendedWebElement changeLanguage;
 
     @FindBy(xpath = "//div[@data-cy]//a[last()][not(@target)]")
     private ExtendedWebElement nextPage;
@@ -68,10 +63,10 @@ public class KufarHomePage extends AbstractPage {
     public void refresh(){driver.get("www.kufar.by");}
 
     public void closePortal() {
-        portalCloseButton.click();
+        portalCloseButton.clickIfPresent();
     }
     public void closePortal2() {
-        portalCloseButton2.click();
+        portalCloseButton2.clickIfPresent();
     }
 
     public void loginBlockButten() {
@@ -96,18 +91,15 @@ public class KufarHomePage extends AbstractPage {
     }
 
 
-    public String getTextFieldResultSearch() {
-        return fieldResultSearch.getText();
+    public String getTextFieldResultSearch(String request) {
+        return fieldResultSearch.format(request).getText();
     }
 
-    public void clickChangeLanguageBLR() {
-        changeLanguageBelarus.click();
+    public void clickChangeLanguage(String name) {
+        changeLanguage.format(name).click();
 
     }
 
-    public void clickChangeLanguageRUS() {
-        changeLanguageRussia.click();
-    }
     public void clickNextPage() {
 
         nextPage.click();
@@ -120,7 +112,7 @@ public class KufarHomePage extends AbstractPage {
         pause(2);
     }
     public LotDescriptionPage openlotDescriptionPage() {
-        lotLink.click();
+        lotLink.clickIfPresent();
         return new LotDescriptionPage(driver);
     }
 

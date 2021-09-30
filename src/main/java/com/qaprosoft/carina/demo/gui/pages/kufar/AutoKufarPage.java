@@ -2,8 +2,11 @@ package com.qaprosoft.carina.demo.gui.pages.kufar;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
+import com.qaprosoft.carina.demo.gui.components.kufar.FileReadSparesKufar;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -13,7 +16,7 @@ public class AutoKufarPage extends AbstractPage {
     @FindBy(xpath = "//a[@data-name='header-generalist-to-auto']")
     private ExtendedWebElement autoBtn;
 
-    @FindBy(xpath = "//section[@data-cy='auto-section-popular-brands']//span[text()='Mercedes-Benz']")
+    @FindBy(xpath = "//section[@data-cy='auto-section-popular-brands']//span[text()='%s']")
     private ExtendedWebElement mercedesBtn;
 
     @FindBy(xpath = "//span[text()='E-Класс']")
@@ -25,17 +28,25 @@ public class AutoKufarPage extends AbstractPage {
     @FindBy(xpath = "//div[@class='swiper-wrapper']//a[@data-name='Запчасти, расходники']")
     private ExtendedWebElement sparesTopMenu;
 
-    @FindBy(xpath = "//section[@id='listings_content']//span[text()='Mercedes-Benz']")
+    @FindBy(xpath = "//section[@id='listings_content']//span[text()='%s']")
     private ExtendedWebElement sparesForMercedes;
 
     @FindBy(xpath = "//div[contains(text(),'Запчасти для легковых авто')]")
     private List<ExtendedWebElement> listFieldSparesItems;
 
+    @FindBy(xpath = "//div[@id='header']//span[1]")
+    private ExtendedWebElement goPageHomeFirstStep;
+
+    @FindBy(xpath = "//a[@role='button']//*[name()='svg']//*[name()='path' and @id='a_home_page_menu']")
+    private ExtendedWebElement goPageHomeSecondStep;
+
+    KufarHomePage kufarHomePage = new KufarHomePage(getDriver());
+
     public void clickAutoBtn(){
         autoBtn.click();
     }
-    public void clickMercedesBtn(){
-        mercedesBtn.click();
+    public void clickMercedesBtn(String modelCar){
+        mercedesBtn.format(modelCar).click();
     }
     public void clickEClassBtn(){
         eClassBtn.click();
@@ -52,8 +63,9 @@ public class AutoKufarPage extends AbstractPage {
     public void clickSparesTopMenu(){
         sparesTopMenu.click();
     }
-    public void clickSparesForMercedes(){
-        sparesForMercedes.click();
+
+    public void clickSparesForMercedes(String modelCar){
+        sparesForMercedes.format(modelCar).click();
     }
 
     public List<String> getListFieldSparesItems(){
@@ -62,5 +74,41 @@ public class AutoKufarPage extends AbstractPage {
             nameSpares.add(spareName.getText());
         }
         return nameSpares;
+    }
+
+    public void clickGoHomePage(){
+        goPageHomeFirstStep.click();
+        goPageHomeSecondStep.click();
+    }
+
+    public  void checkAssertSparesFor3Page(){
+        FileReadSparesKufar fileSpares = new FileReadSparesKufar();
+        List<String> spareNames = getListFieldSparesItems();
+
+        for(int i = 0; i<3; i++){
+            for (String name : spareNames){
+                List<String> spareLst = fileSpares.getLineList();
+                boolean hasSpare = false;
+                for(String lstSpare : spareLst){
+                    if (name.contains(lstSpare)){
+                        hasSpare = true;
+                    }
+                }
+                Assert.assertTrue(hasSpare);
+            }
+            kufarHomePage.clickNextPage();
+        }
+    }
+
+    public void checkAssertModelMercedesFor3Page(){
+        SoftAssert softAssert = new SoftAssert();
+        for(int i = 0; i<3; i++){
+            List<String> names = getTextFieldItemsName();
+            for(String carName : names){
+                softAssert.assertTrue(carName.contains("Mercedes-Benz E-Класс"));
+            }
+            kufarHomePage.clickNextPage();
+        }
+        softAssert.assertAll();
     }
 }

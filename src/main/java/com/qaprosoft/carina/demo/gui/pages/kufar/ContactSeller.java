@@ -12,13 +12,10 @@ public class ContactSeller extends AbstractPage {
 
     @FindBy(xpath = "//button[text()='Отправить']")
     private ExtendedWebElement sendMessageBtn;
-    @FindBy(xpath = "//div[@id='sidebar-buttons']//button[text()='Написать']")
-    private ExtendedWebElement writeToSeller;
-        @FindBy(xpath = "//div[@id='__next']//img[@alt='close']")
+    @FindBy(xpath = "//div[@id='sidebar-buttons']//button[text()='%s']")
+    private ExtendedWebElement contactToSeller;
+    @FindBy(xpath = "//div[@id='__next']//img[@alt='close']")
     private ExtendedWebElement closeFieldMssgBtn;
-
-    @FindBy(xpath = "//div[@id='sidebar-buttons']//button[text()='Позвонить']")
-    private ExtendedWebElement callToSeller;
     @FindBy(xpath = "//div[@data-name='phone-number-modal']//div[last()]")
     private ExtendedWebElement fieldSaySalesman;
     @FindBy(xpath = "//div[@id='adview_content']//img[@alt='close']")
@@ -27,15 +24,15 @@ public class ContactSeller extends AbstractPage {
     @FindBy(xpath = "//div[@id='header']//a//img[@width='130']")
     private ExtendedWebElement goPageHome;
 
-    public void clickWrite(){
-        writeToSeller.click();
+    public void clickWrite(String contact){
+        contactToSeller.format(contact).clickIfPresent();
     }
     public void clickCloseBtnMssg(){
         closeFieldMssgBtn.click();
     }
 
-    public void clickCall(){
-        callToSeller.click();
+    public void clickCall(String contact){
+        contactToSeller.format(contact).clickIfPresent();
     }
     public void clickCloseBtnCall(){closeFieldCallBtn.click();
     }

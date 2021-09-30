@@ -2,17 +2,12 @@ package com.qaprosoft.carina.demo.kufar;
 
 import com.qaprosoft.carina.core.foundation.IAbstractTest;
 import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
-import com.qaprosoft.carina.core.foundation.utils.tag.Priority;
-import com.qaprosoft.carina.core.foundation.utils.tag.TestPriority;
 import com.qaprosoft.carina.demo.gui.components.kufar.CategoryItem;
 import com.qaprosoft.carina.demo.gui.components.kufar.ChooseProductCategory;
-import com.qaprosoft.carina.demo.gui.pages.kufar.ContactSeller;
-import com.qaprosoft.carina.demo.gui.components.kufar.LoginBlock;
-import com.qaprosoft.carina.demo.gui.components.kufar.UserMenu;
 import com.qaprosoft.carina.demo.gui.pages.kufar.KufarHomePage;
 
 
-import org.openqa.selenium.WebDriver;
+import com.qaprosoft.carina.demo.gui.utils.enums.Languages;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -46,9 +41,9 @@ public class KufarTest implements IAbstractTest {
     @MethodOwner(owner = "nzheleznyi")
     public void testChangeLanguage() {
 
-        kufarHomePage.clickChangeLanguageBLR();
+        kufarHomePage.clickChangeLanguage(Languages.BLR.getName());
         Assert.assertEquals(kufarHomePage.getTextAllBelarusDtn(),"Уся Беларусь");
-        kufarHomePage.clickChangeLanguageRUS();
+        kufarHomePage.clickChangeLanguage(Languages.RUS.getName());
     }
 
     @Test
@@ -57,7 +52,7 @@ public class KufarTest implements IAbstractTest {
 
         kufarHomePage.clickBackPage();
         pause(2);
-        Assert.assertEquals(getDriver().getCurrentUrl(),"https://www.kufar.by/l?cursor=eyJ0IjoiYWJzIiwiZiI6dHJ1ZSwicCI6MX0=");
+        Assert.assertEquals(getDriver().getCurrentUrl(),"https://www.kufar.by/l?cursor=eyJ0IjoiYWJzIiwiZiI6dHJ1ZSwicCI6M30");
     }
 
     @Test
@@ -87,14 +82,15 @@ public class KufarTest implements IAbstractTest {
         }
     }
 
-   /* @Test
+    @Test
     @MethodOwner(owner = "nzheleznyi")
     public void testSearchField() {
 
-        final String inputSF = "подушка";
+        final String inputSF = "гном";
         kufarHomePage.openSearchField(inputSF);
+        Assert.assertEquals(getDriver().getTitle(),String.format("%s купить на Куфаре", inputSF) );
 
-    }*/
+    }
 
     @AfterClass
     public void testPassed() {

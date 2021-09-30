@@ -2,15 +2,12 @@ package com.qaprosoft.carina.demo.kufar;
 
 import com.qaprosoft.carina.core.foundation.IAbstractTest;
 import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
-import com.qaprosoft.carina.core.foundation.utils.tag.Priority;
-import com.qaprosoft.carina.core.foundation.utils.tag.TestPriority;
 import com.qaprosoft.carina.demo.gui.components.kufar.Authorization;
-import com.qaprosoft.carina.demo.gui.components.kufar.LogOut;
-import com.qaprosoft.carina.demo.gui.components.kufar.LoginBlock;
 import com.qaprosoft.carina.demo.gui.components.kufar.UserMenu;
 import com.qaprosoft.carina.demo.gui.pages.kufar.ContactSeller;
 import com.qaprosoft.carina.demo.gui.pages.kufar.KufarHomePage;
-import org.openqa.selenium.By;
+import com.qaprosoft.carina.demo.gui.utils.enums.ContactWithSeller;
+import com.qaprosoft.carina.demo.gui.utils.enums.ProfileMenu;
 import org.openqa.selenium.NoSuchElementException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -52,7 +49,7 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
         kufarHomePage.openUserMenu();
 
         UserMenu userMenu = new UserMenu(getDriver());
-        userMenu.clickMyAds();
+        userMenu.clickMyAds(ProfileMenu.ADS.getMessAds());
         userMenu.closeInfoField();
         pause(1);
         Assert.assertEquals(getDriver().getTitle(),"Мои объявления");
@@ -64,7 +61,7 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
         kufarHomePage.openUserMenu();
 
         UserMenu userMenu = new UserMenu(getDriver());
-        userMenu.clickMyMesseges();
+        userMenu.clickMyMesseges(ProfileMenu.MESSEGES.getMessAds());
         Assert.assertEquals(getDriver().getTitle(),"Kufar | Продавайте и покупайте любые товары");
     }
 
@@ -73,7 +70,7 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
     public void testNotifications() {
         kufarHomePage.clickNotificationsButton();
         UserMenu userMenu = new UserMenu(getDriver());
-        Assert.assertEquals(userMenu.getTextAds(),"Отметить все как прочитанные");
+        Assert.assertEquals(userMenu.getTextAds(ProfileMenu.GETADS.getMessAds()),"Отметить все как прочитанные");
 
     }
 
@@ -83,7 +80,7 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
         kufarHomePage.openProductPage();
 
         ContactSeller contactSeller = new ContactSeller(getDriver());
-        contactSeller.clickWrite();
+        contactSeller.clickWrite(ContactWithSeller.WRITE.getContact());
         Assert.assertEquals(contactSeller.getTextSendMessageBtn(),"Отправить");
         contactSeller.clickCloseBtnMssg();
         contactSeller.clickGoHomePage();
@@ -97,7 +94,7 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
            kufarHomePage.openProductPage();
 
            ContactSeller contactSeller = new ContactSeller(getDriver());
-           contactSeller.clickCall();
+           contactSeller.clickCall(ContactWithSeller.CALL.getContact());
            Assert.assertEquals(contactSeller.getTextAfterCallBtn(),"Пожалуйста, скажите продавцу, что звоните по объявлению с Куфара");
            contactSeller.clickCloseBtnCall();
            contactSeller.clickGoHomePage();
