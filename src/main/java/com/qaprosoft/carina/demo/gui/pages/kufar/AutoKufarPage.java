@@ -3,6 +3,7 @@ package com.qaprosoft.carina.demo.gui.pages.kufar;
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
 import com.qaprosoft.carina.demo.gui.components.kufar.FileReadSparesKufar;
+import com.qaprosoft.carina.demo.gui.utils.enums.ModelCar;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
@@ -65,7 +66,7 @@ public class AutoKufarPage extends AbstractPage {
     }
 
     public void clickSparesForMercedes(String modelCar){
-        sparesForMercedes.format(modelCar).click();
+        sparesForMercedes.format(ModelCar.MERCEDES.getModel()).click();
     }
 
     public List<String> getListFieldSparesItems(){

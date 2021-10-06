@@ -8,8 +8,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 
 import java.lang.invoke.MethodHandles;
+import java.util.LinkedList;
+import java.util.List;
 
 public class KufarHomePage extends AbstractPage {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
@@ -28,6 +31,9 @@ public class KufarHomePage extends AbstractPage {
 
     @FindBy(xpath = "//input[@placeholder='Товар, услуга']")
     private ExtendedWebElement searchField;
+
+    @FindBy(xpath = "//h3[contains(text(), '%s')]")
+    private List<ExtendedWebElement> searchResult;
 
     @FindBy(xpath = "//button[@type='button']//span[text()='Уся Беларусь']")
     private ExtendedWebElement allBelarusBtn;
@@ -81,6 +87,18 @@ public class KufarHomePage extends AbstractPage {
         searchField.click();
         searchField.type(sf);
         searchField.sendKeys(Keys.ENTER);
+    }
+    public List<String> getSearchResult(String itemName){
+        List<String> itemTextList = new LinkedList<>();
+        for (ExtendedWebElement item:searchResult
+             ) {itemTextList.add(item.format(itemName).getText());}
+        return itemTextList;
+    }
+    public void AssertSearchResult(String item){
+        List<String> itemsList = getSearchResult(item);
+        for(String checkItems : itemsList){
+            Assert.assertTrue(checkItems.contains(item));
+        }
     }
     public String getTextAllBelarusDtn(){
         return allBelarusBtn.getText();

@@ -1,13 +1,16 @@
 package com.qaprosoft.carina.demo.kufar;
 
 import com.qaprosoft.carina.core.foundation.IAbstractTest;
+import com.qaprosoft.carina.core.foundation.dataprovider.annotations.XlsDataSourceParameters;
 import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
 import com.qaprosoft.carina.demo.gui.components.kufar.CategoryItem;
 import com.qaprosoft.carina.demo.gui.components.kufar.ChooseProductCategory;
+import com.qaprosoft.carina.demo.gui.pages.kufar.CitySelectionKufar;
 import com.qaprosoft.carina.demo.gui.pages.kufar.KufarHomePage;
 
 
 import com.qaprosoft.carina.demo.gui.utils.enums.Languages;
+import org.junit.runner.notification.RunListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -16,7 +19,7 @@ import org.testng.annotations.*;
 import java.lang.invoke.MethodHandles;
 import java.util.List;
 
-public class KufarTest implements IAbstractTest {
+public class TestHomePageKufar implements IAbstractTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
     KufarHomePage kufarHomePage = new KufarHomePage(getDriver());
@@ -82,15 +85,27 @@ public class KufarTest implements IAbstractTest {
         }
     }
 
-    @Test
-    @MethodOwner(owner = "nzheleznyi")
-    public void testSearchField() {
-
-        final String inputSF = "гном";
-        kufarHomePage.openSearchField(inputSF);
-        Assert.assertEquals(getDriver().getTitle(),String.format("%s купить на Куфаре", inputSF) );
-
+    @Test(dataProvider = "SingleDataProvider")
+    @XlsDataSourceParameters(path = "xls/demo.xlsx", sheet = "listItemsForSearch", dsUid = "TUID", dsArgs = "item")
+    public void testSearchField(String item) {
+        kufarHomePage.openSearchField(item);
+        kufarHomePage.AssertSearchResult(item);
     }
+
+    @Test(dataProvider = "SingleDataProvider")
+    @XlsDataSourceParameters(path = "xls/demo.xlsx", sheet = "citySelection", dsUid = "TUID", dsArgs = "city, district")
+    public void testCheckCity(String city, String district) {
+        CitySelectionKufar citySelectionKufar = new CitySelectionKufar(getDriver());
+        citySelectionKufar.clickDistrict();
+        citySelectionKufar.clickChooseDistrict(district);
+        citySelectionKufar.clickCity();
+        citySelectionKufar.clickChooseCity(city);
+        citySelectionKufar.clickSearchBtn();
+
+        Assert.assertEquals(citySelectionKufar.getTextCity(city), city);
+        System.out.println(city);
+    }
+
 
     @AfterClass
     public void testPassed() {
