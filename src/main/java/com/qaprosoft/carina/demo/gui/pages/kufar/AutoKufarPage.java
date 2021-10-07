@@ -17,6 +17,9 @@ public class AutoKufarPage extends AbstractPage {
     @FindBy(xpath = "//a[@data-name='header-generalist-to-auto']")
     private ExtendedWebElement autoBtn;
 
+    @FindBy(xpath = "//span[text()='%s']")
+    private ExtendedWebElement namePageAuto;
+
     @FindBy(xpath = "//section[@data-cy='auto-section-popular-brands']//span[text()='%s']")
     private ExtendedWebElement mercedesBtn;
 
@@ -46,6 +49,10 @@ public class AutoKufarPage extends AbstractPage {
     public void clickAutoBtn(){
         autoBtn.click();
     }
+    public String getTextNamePageAuto(String namePage){
+        kufarHomePage.closePortal2();
+        return namePageAuto.format(namePage).getText();
+    }
     public void clickMercedesBtn(String modelCar){
         mercedesBtn.format(modelCar).click();
     }
@@ -66,7 +73,7 @@ public class AutoKufarPage extends AbstractPage {
     }
 
     public void clickSparesForMercedes(String modelCar){
-        sparesForMercedes.format(ModelCar.MERCEDES.getModel()).click();
+        sparesForMercedes.format(modelCar).click();
     }
 
     public List<String> getListFieldSparesItems(){

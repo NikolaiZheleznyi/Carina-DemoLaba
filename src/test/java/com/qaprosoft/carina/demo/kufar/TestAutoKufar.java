@@ -6,6 +6,7 @@ import com.qaprosoft.carina.demo.gui.components.kufar.FileReadSparesKufar;
 import com.qaprosoft.carina.demo.gui.pages.kufar.KufarHomePage;
 import com.qaprosoft.carina.demo.gui.pages.kufar.AutoKufarPage;
 import com.qaprosoft.carina.demo.gui.utils.enums.ModelCar;
+import com.qaprosoft.carina.demo.gui.utils.enums.NamePageTopMenu;
 import org.openqa.selenium.NoSuchElementException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,7 +35,11 @@ public class TestAutoKufar implements IAbstractTest {
 
         AutoKufarPage openAutoBtn = new AutoKufarPage(getDriver());
         openAutoBtn.clickAutoBtn();}
-
+    @Test
+    public void testOpenedPageAuto(){
+        AutoKufarPage autoKufarPage = new AutoKufarPage(getDriver());
+        Assert.assertEquals(autoKufarPage.getTextNamePageAuto(NamePageTopMenu.CAR.getNamePage()), NamePageTopMenu.CAR.getNamePage());
+    }
     @Test
     @MethodOwner(owner = "nzheleznyi")
     public void testCheckItemsNameForCarMercedesEClass() {
