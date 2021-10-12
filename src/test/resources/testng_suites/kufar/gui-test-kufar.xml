@@ -27,6 +27,18 @@
             </class>
         </classes>
     </test>
+    <!--<test name="property kufar test">&lt;!&ndash;
+        <parameter name="currency" value="р."/>
+        <parameter name="currency" value="$"></parameter>
+        <parameter name="currency" value="€"></parameter>&ndash;&gt;
+        <classes>
+            <class name="com.qaprosoft.carina.demo.kufar.RealPropertyKufarTest">
+                <methods>
+                    <include name="testFieldPriceForFilterProperty"/>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
     <test name="auto kufar test">
         <classes>
             <class name="com.qaprosoft.carina.demo.kufar.TestAutoKufar" />

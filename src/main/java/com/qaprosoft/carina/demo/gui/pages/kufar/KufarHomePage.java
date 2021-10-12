@@ -79,9 +79,11 @@ public class KufarHomePage extends AbstractPage {
         loginBlockButten.click();
     }
 
+
     public void openUserMenu() {
         userMenu.click();
     }
+
 
     public void openSearchField(String sf) {
         searchField.click();

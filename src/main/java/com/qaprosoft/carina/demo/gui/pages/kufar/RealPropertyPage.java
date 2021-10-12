@@ -24,6 +24,24 @@ public class RealPropertyPage extends AbstractPage {
     @FindBy(xpath = "//option[text()='%s']")
     private ExtendedWebElement choosePropertyType;
 
+    @FindBy(xpath = "//button[@alt='%s']")
+    private ExtendedWebElement priceOrRoomBtn;
+
+    @FindBy(xpath = "//select[@name='cur']")
+    private ExtendedWebElement currencyBtn;
+
+    @FindBy(xpath = "//option[text()='%s']")
+    private ExtendedWebElement chooseCurrency;
+
+    @FindBy(xpath = "//div[@role='radiogroup']//div[text()='%s']")
+    private ExtendedWebElement numbersRoom;
+
+    @FindBy(xpath = "")
+    private ExtendedWebElement kufarTransitionBtn;
+
+    @FindBy(xpath = "//a[@href='https://www.kufar.by']")
+    private ExtendedWebElement homePageBtn;
+
     public void clickChoosePropertyType(String typeProperty){
         choosePropertyType.format(typeProperty).click();
         Assert.assertEquals(choosePropertyType.format(typeProperty).getText(), typeProperty);
@@ -40,4 +58,31 @@ public class RealPropertyPage extends AbstractPage {
         return namePage.format(name).getText();
     }
 
+    public void clickPriceBtn(String fieldName){
+        priceOrRoomBtn.format(fieldName).click();
+    }
+
+    public void clickCurrencyBtn(){
+        currencyBtn.click();
+    }
+
+    public void clickCurrency(String currencyType){
+        chooseCurrency.format(currencyType).click();
+    }
+
+    public String getTextCurrencyBtn(String currencyType){
+        return chooseCurrency.format(currencyType).getText();
+    }
+
+    public void clickRoomBtn(String fieldName){
+        priceOrRoomBtn.format(fieldName).click();
+    }
+
+    public void clickNumbersRoom(String numRoom){
+        numbersRoom.format(numRoom).click();
+    }
+
+    public String getTextNumberRoom(String textField){
+        return numbersRoom.format(textField).getText();
+    }
 }

@@ -39,16 +39,21 @@ public class AutoKufarPage extends AbstractPage {
     private List<ExtendedWebElement> listFieldSparesItems;
 
     @FindBy(xpath = "//div[@id='header']//span[1]")
-    private ExtendedWebElement goPageHomeFirstStep;
+    private ExtendedWebElement categMenuBtn;
 
-    @FindBy(xpath = "//a[@role='button']//*[name()='svg']//*[name()='path' and @id='a_home_page_menu']")
-    private ExtendedWebElement goPageHomeSecondStep;
+    @FindBy(xpath = "//a[@href='https://re.kufar.by']")
+    private ExtendedWebElement propertyPageGoBtn;
 
     KufarHomePage kufarHomePage = new KufarHomePage(getDriver());
 
     public void clickAutoBtn(){
         autoBtn.click();
     }
+
+    public ExtendedWebElement getAutoBtn(){
+        return autoBtn;
+    }
+
     public String getTextNamePageAuto(String namePage){
         kufarHomePage.closePortal2();
         return namePageAuto.format(namePage).getText();
@@ -84,9 +89,12 @@ public class AutoKufarPage extends AbstractPage {
         return nameSpares;
     }
 
-    public void clickGoHomePage(){
-        goPageHomeFirstStep.click();
-        goPageHomeSecondStep.click();
+    public void clickGoHomePage1(){
+        categMenuBtn.click();
+    }
+
+    public ExtendedWebElement clickGoHomePage2(){
+        return propertyPageGoBtn;
     }
 
     public  void checkAssertSparesFor3Page(){

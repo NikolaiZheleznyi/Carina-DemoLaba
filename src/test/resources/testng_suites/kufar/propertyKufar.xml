@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="check parametrization">
+    <test thread-count="5" name="parametrization 1">
+        <parameter name="currency" value="$"/>
+        <classes>
+            <class name="com.qaprosoft.carina.demo.kufar.RealPropertyKufarTest">
+                <methods>
+                    <include name="testFieldPriceForFilterProperty"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test thread-count="5" name="parametrization 2">
+        <parameter name="currency" value="р."/>
+        <classes>
+            <class name="com.qaprosoft.carina.demo.kufar.RealPropertyKufarTest">
+                <methods>
+                    <include name="testFieldPriceForFilterProperty"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test thread-count="5" name="parametrization 3">
+        <parameter name="currency" value="€"/>
+        <classes>
+            <class name="com.qaprosoft.carina.demo.kufar.RealPropertyKufarTest">
+                <methods>
+                    <include name="testFieldPriceForFilterProperty"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
