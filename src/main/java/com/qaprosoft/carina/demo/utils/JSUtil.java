@@ -38,8 +38,9 @@ public class JSUtil {
 
     public static void  clickElementByJS(WebElement element, WebDriver driver){
         JavascriptExecutor js = ((JavascriptExecutor) driver);
-        js.executeScript("arguments[0].click;", element);
+        js.executeScript("arguments[0].click();", element);
     }
+
 
     public static void  generateAlert(WebDriver driver, String message){
         JavascriptExecutor js = ((JavascriptExecutor) driver);

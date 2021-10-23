@@ -34,7 +34,7 @@ public class KufarWithAuthorizationTest implements IAbstractTest {
         }catch(NoSuchElementException e){}
         Authorization authorization = new Authorization(getDriver());
         authorization.testAuthorization();
-        Assert.assertTrue(kufarHomePage.getUserImageBtn().isElementPresent(),"Н");}
+        Assert.assertTrue(kufarHomePage.getElementUserImageBtn().isElementPresent(),"Н");}
     @BeforeClass
     public void closeFlyPage(){
         try {

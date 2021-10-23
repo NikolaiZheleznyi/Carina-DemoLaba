@@ -148,7 +148,7 @@ public class KufarHomePage extends AbstractPage {
         return new LotDescriptionPage(getDriver());
     }
 
-    public ExtendedWebElement getUserImageBtn(){
+    public ExtendedWebElement getElementUserImageBtn(){
         return userImageBtn;
     }
 }

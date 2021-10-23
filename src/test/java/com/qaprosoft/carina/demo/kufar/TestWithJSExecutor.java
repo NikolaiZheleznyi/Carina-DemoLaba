@@ -12,6 +12,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -57,16 +58,18 @@ public class TestWithJSExecutor implements IAbstractTest {
         autoKufarPage.clickAutoBtn();
         kufarHomePage.closePortal2();
         autoKufarPage.clickGoHomePage1();
-        //click on element by JS
-        JSUtil.clickElementByJS(autoKufarPage.clickGoHomePage2().getElement(), getDriver());
-        pause(2);
         //capture title of the page
         String title = JSUtil.getTitleByJS(getDriver());
         System.out.println(title);
+        //check method isElementWithTextPresent()
+        Assert.assertTrue(autoKufarPage.clickGoHomePage2().isElementWithTextPresent("Недвижимость"));
+        //click on element by JS
+        JSUtil.clickElementByJS(autoKufarPage.clickGoHomePage2().getElement(), getDriver());
+        pause(2);
         //refreshing page by JS
         JSUtil.refresherBrouserByJS(getDriver());
         //generate alert
-        JSUtil.generateAlert(getDriver(), "get bed motherfucker");
-        pause(2);
+        JSUtil.generateAlert(getDriver(), "get bed");
+        pause(5);
     }
 }

@@ -124,6 +124,7 @@ public class AutoKufarPage extends AbstractPage {
                 softAssert.assertTrue(carName.contains("Mercedes-Benz E-Класс"));
             }
             kufarHomePage.clickNextPage();
+
         }
         softAssert.assertAll();
     }
